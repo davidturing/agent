@@ -1,109 +1,113 @@
 # Java 软件开发规范 (Enterprise Agent Edition)
 
-**版本**: 2.0  
+**版本**: 3.0 (Deep Dive)  
 **生效日期**: 2026-01-27  
-**基准**: Alibaba Java Coding Guidelines + Google Java Style  
+**基准**: Alibaba Java Guide + Google Style + Spring Boot Best Practices  
 
-本规范旨在定义 Java 项目在架构设计、并发处理、数据库交互及异常与日志方面的严格标准。
-
----
-
-## 1. 命名与代码风格 (Naming & Style)
-
-### 1.1 命名规约
-| 类型 | 规则 | 示例 | 说明 |
-| :--- | :--- | :--- | :--- |
-| **Class** | `UpperCamelCase` | `UserLoginController` | 名词，领域模型清晰 |
-| **Method** | `lowerCamelCase` | `listActiveUsers` | 动词开头 |
-| **Constant** | `UPPER_CASE` | `MAX_RETRY_COUNT` | 必须 `static final` |
-| **Package** | `lowercase` | `com.company.module.biz` | 单数形式，点分隔 |
-| **Enum** | `UpperCamelCase` | `PaymentStatusEnum` | 必须以 Enum 后缀结尾 |
-| **Impl** | `Impl` Suffix | `UserServiceImpl` | 接口实现类 |
-
-### 1.2 POJO 规范 (Data Objects)
--   **DO/DTO/VO**: 严格区分各层数据对象。
-    -   `DO (Data Object)`: 与数据库表一一对应。
-    -   `DTO (Data Transfer Object)`: RPC/Service 层传输。
-    -   `VO (View Object)`: 前端展示。
--   **No `is` Prefix**: Boolean 类型的属性名禁止加 `is` 前缀 (如 `isSuccess`)，防止 RPC 框架序列化异常。
--   **Lombok**: 推荐使用 `@Data`, `@Builder`, `@NoArgsConstructor`, `@AllArgsConstructor` 减少样板代码。
+本规范适用于构建**高并发、高可用**的企业级 Java 应用，特别是基于 Spring Boot 生态的微服务和 Agent 后端。
 
 ---
 
-## 2. 并发处理 (Concurrency)
+## 1. 架构分层规约 (Architecture Layering)
 
-### 2.1 线程池 (Thread Pools)
--   **严禁显式创建线程**: 禁止 `new Thread()`。必须通过线程池管理并发。
--   **自定义线程池**: 严禁使用 `Executors.newFixedThreadPool` 等静态方法（避免 OOM）。必须使用 `ThreadPoolExecutor` 构造函数，明确指定：
-    -   `corePoolSize` / `maximumPoolSize`
-    -   `ArrayBlockingQueue` (有界队列)
-    -   `ThreadFactory` (必须给线程命名，如 "order-process-pool-%d")
-    -   `RejectedExecutionHandler` (拒绝策略)
+### 1.1 分层模型
+严禁跨层调用，必须遵循单向依赖：
+1.  **Web 层 (Controller)**: 参数校验、异常捕获、DTO/VO 转换。
+2.  **Service 层 (Biz Logic)**: 核心业务逻辑，事务控制，原子服务编排。
+3.  **Manager 层 (Option)**: 通用业务处理，对第三方平台 (LLM API) 的封装。
+4.  **DAO 层 (Repository)**: 仅负责与存储交互 (CRUD)。
 
-### 2.2 线程安全
--   **SimpleDateFormat**: 线程不安全，禁止定义为 static 变量。推荐使用 Java 8 的 `DateTimeFormatter`。
--   **ThreadLocal**:以此传递上下文时，必须遵循 **try-finally** 模式，在 `finally` 块中调用 `remove()` 清理，防止内存泄漏。
-
----
-
-## 3. 数据库规约 (Database & MySQL)
-
-### 3.1 建表规范
--   **主键**: 必须有 `id` (bigint unsigned)，自增或雪花算法。
--   **必填字段**: `gmt_create` (datetime), `gmt_modified` (datetime).
--   **字段类型**:
-    -   **Boolean**: 使用 `tinyint(1)`，0 为 false，1 为 true。
-    -   **Money**: 使用 `decimal(10, 2)` 或存储 `bigint` (分)，严禁使用 `double/float`。
--   **索引**:
-    -   主键索引: `pk_字段名`
-    -   唯一索引: `uk_字段名`
-    -   普通索引: `idx_字段名`
-
-### 3.2 SQL 规约
--   **禁止 `SELECT *`**: 必须明确指定列名。
--   **禁止隐式转换**: 字符型字段查询时必须加单引号，避免索引失效。
--   **分页查询**: `LIMIT` 偏移量过大时，必须使用 "延迟关联" 或 "ID > X" 的方式优化。
+### 1.2 对象模型 (DTO/DO/VO)
+-   **DO (Data Object)**: 数据库表映射，字段与 DB 完全一致。
+-   **DTO (Data Transfer Object)**: 服务间传输，不暴露 DB 结构，必须实现 `Serializable`。
+-   **VO (View Object)**: 返回给前端，隐藏敏感字段 (如 masking 手机号)。
+-   **Converter**: 必须使用 `MapStruct` 或 `BeanUtils` 进行对象转换，禁止在业务代码中手动 set 数十个字段。
 
 ---
 
-## 4. 异常与日志 (Error Handling & Logging)
+## 2. Spring Boot 最佳实践
 
-### 4.1 异常处理体系
--   **分层异常**:
-    -   DAO 层抛出框架异常 (SQLException)。
-    -   Service 层捕获并抛出 `BusinessException` (包含 ErrorCode)。
-    -   Web/Controller 层统一捕获，封装为 `Result<T>` 返回。
--   **禁止吞异常**: `catch` 块中必须处理或记录日志 (`log.error("msg", e)`), 严禁空 `catch`。
+### 2.1 依赖注入 (DI)
+-   **构造器注入**: 优先使用构造器注入 (Constructor Injection) 而非 `@Autowired` 字段注入。
+-   **Lombok**: 配合 `@RequiredArgsConstructor` 实现简洁的构造器注入。
 
-### 4.2 日志规范 (SLF4J)
--   **日志对象**: 使用 `@Slf4j` 或 `private static final Logger log = LoggerFactory.getLogger(Clazz.class);`
--   **占位符**: 使用 `{}` 占位，避免字符串拼接。
-    -   ✅ `log.info("Order processed: id={}", orderId);`
--   **日志级别**:
-    -   `DEBUG`: 调试信息，生产关闭。
-    -   `INFO`: 关键业务状态流转（入参、出参、状态变更）。
-    -   `WARN`: 可自愈的异常（如重试）。
-    -   `ERROR`: 需要人工介入的系统故障。
+```java
+// ✅ Good
+@Service
+@RequiredArgsConstructor
+public class UserServiceImpl implements UserService {
+    private final UserMapper userMapper; // 自动生成构造函数注入
+}
+```
 
----
+### 2.2 统一响应与异常
+-   **Global Exception Handler**: 使用 `@RestControllerAdvice` 统一处理异常，返回标准 JSON 结构 (`code`, `msg`, `data`)。
+-   **Pre-conditions**: 使用 `Assert` 类进行参数卫语句检查。
 
-## 5. 单元测试 (Unit Testing)
-
-### 5.1 准则
--   **AIR 原则**:
-    -   **A**utomatic: 全自动运行，无人工干预。
-    -   **I**ndependent: 测试用例相互独立，无依赖。
-    -   **R**epeatable: 任何环境、任何时间执行结果一致。
--   **Mock**: 外部依赖（DB, Redis, RPC）必须使用 `Mockito` 进行 Mock，只测试核心业务逻辑。
+```java
+Assert.notNull(req.getUserId(), "UserId cannot be null");
+```
 
 ---
 
-## 6. 自我审查清单 (Self-Review Checklist)
+## 3. 并发与分布式 (Concurrency & Distributed)
 
-Agent 在生成/提交代码前，必须回答：
-- [ ] 线程池是否使用了有界队列并自定义了名称？
-- [ ] 数据库查询是否避免了 `SELECT *` 和全表扫描？
-- [ ] 所有的 Money 类型是否避免了浮点数精度问题？
-- [ ] 所有的 DTO/POJO 是否区分明确？
-- [ ] 是否处理了所有的 Checked Exception？
-- [ ] 日志是否包含了上下文 ID (TraceId) 和异常堆栈？
+### 3.1 锁机制
+-   **JVM 锁**: 单机环境使用 `ReentrantLock` 或 `synchronized`，但在微服务下几乎无用。
+-   **分布式锁**: 必须使用 Redis (Redisson) 或 ZooKeeper。
+    -   **锁超时**: 必须设置 Lease Time，防止服务宕机导致死锁。
+    -   **加锁粒度**: 仅锁定必要的资源 (e.g., `lock_order_{orderId}`)，禁止锁定全局。
+
+### 3.2 缓存策略 (Cache)
+-   **Cache-Aside**: 读：先查缓存，hit 则返回，miss 则查库并回填；写：先更新库，再**删除**缓存 (Double Delete 或 延迟双删)。
+-   **穿透/击穿/雪花**: 必须配置 BloomFilter 防止穿透，设置随机过期时间防止雪崩。
+
+### 3.3 异步执行
+-   **@Async**: 仅用于非核心路径 (如发送邮件)。必须配置自定义 `TaskExecutor`，禁止使用默认线程池。
+-   **MQ**: 核心业务解耦必须使用消息队列 (RocketMQ/Kafka)。发送方必须保证"事务消息"或"本地消息表"以确保最终一致性。
+
+---
+
+## 4. 数据库与事务 (Database & Transaction)
+
+### 4.1 SQL 性能优化
+-   **禁止**: `SELECT *`，`COUNT(column)` (使用 `COUNT(*)`), 在索引列上做函数运算。
+-   **批量操作**: 插入/更新大量数据时，使用 MyBatis 的 Batch 模式，禁止循环单条插入。
+-   **深分页**: 使用 `id > lastId limit N` 替代 `offset M limit N`。
+
+### 4.2 事务控制
+-   **@Transactional**: 仅加在 Service 层 public 方法上。
+-   **事务粒度**: 事务中严禁进行远程 RPC 调用 (HTTP/Dubbo) 或 复杂耗时计算。这会占用连接池链接。
+    -   ✅ 方案: 先做 RPC 获取数据，再开启事务保存数据。
+-   **回滚**: 默认只回滚 `RuntimeException`。如需回滚 Check Exception，必须指定 `rollbackFor = Exception.class`。
+
+---
+
+## 5. 稳定性与可观测性 (Reliability & Observability)
+
+### 5.1 熔断与降级
+-   调用外部 LLM 或第三方 API 时，必须配置 **Circuit Breaker** (Resilience4j / Sentinel)。
+-   超时时间 (Timeout) 必须显式设置，连接超时 (Connect) 通常 < 3s，读取超时 (Read) 视业务而定。
+
+### 5.2 日志规约 (MDC)
+-   **TraceId**: 在 Web 过滤器 (Filter) 中生成 UUID 放入 `MDC`，并在所有日志中通过 `%X{traceId}` 输出，实现全链路追踪。
+-   **脱敏**: 手机号、身份证、密码在打印日志时必须 Masking (如 `138****0000`)。
+
+---
+
+## 6. JVM 调优简述 (Tuning)
+-   **内存**: 堆内存大小 `-Xms` 和 `-Xmx` 设为相同值，避免运行时抖动。
+-   **GC**: 推荐使用 G1 GC (JDK 8+) 或 ZGC (JDK 17+)，针对低延迟场景优化。
+-   **OOM Dump**: 必须配置 `-XX:+HeapDumpOnOutOfMemoryError`，现场保留证据。
+
+---
+
+## 7. 自我审查清单 (Self-Review Checklist)
+
+Agent 在提交 Java 代码前，必须检查：
+- [ ] 事务方法内是否有 RPC 调用？(性能杀手)
+- [ ] 分布式锁是否设置了超时时间？
+- [ ] Controller 层是否捕获了所有异常并标准化返回？
+- [ ] 缓存更新是否采用了"先更库后删缓存"的策略？
+- [ ] SQL 是否存在全表扫描风险？
+- [ ] 线程池是否自定义了参数，没有使用默认方案？

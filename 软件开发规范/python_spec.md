@@ -1,172 +1,153 @@
 # Python 软件开发规范 (Enterprise Agent Edition)
 
-**版本**: 2.0  
+**版本**: 3.0 (Deep Dive)  
 **生效日期**: 2026-01-27  
-**基准**: Google Python Style Guide + PEP 8  
+**基准**: Google Python Style Guide + PEP 8 + Anthropic Engineering Practices  
 
-本规范旨在建立一套**严格、清晰、可自动化检查**的 Python 代码标准。适用于所有由 Agent 生成或人工编写的 Python 项目。
-
----
-
-## 1. 代码风格与布局 (Style & Layout)
-
-### 1.1 缩进与断行
--   **缩进**: 强制使用 **4 个空格**。严禁使用 Tab。
--   **行宽**: 限制为 **88 字符** (遵循 `Black` 格式化标准)。超过时必须换行。
--   **断行策略**:
-    -   优先在二元运算符**之前**换行。
-    -   参数列表过长时，采用"垂直挂起"格式（Vertical Hanging Indent）。
-
-```python
-# ✅ Good
-def long_function_name(
-    var_one: int,
-    var_two: str,
-    var_three: float,
-) -> None:
-    result = (
-        some_very_long_variable_name
-        + another_variable_name
-        - third_variable_name
-    )
-```
-
-### 1.2 导入规范 (Imports)
--   **分区顺序**:
-    1.  标准库 (Standard Library)
-    2.  第三方库 (Third Party)
-    3.  本地应用/库 (Local Application)
--   **组内排序**: 按字母顺序排列。
--   **禁止**: `from module import *` (通配符导入)。
--   **别名**: 仅对通用库使用标准别名 (`numpy as np`, `pandas as pd`, `tensorflow as tf`)。
-
-### 1.3 字符串 (Strings)
--   **F-Strings**: 优先使用 f-string (`f"{name}"`) 进行字符串拼接，性能和可读性最佳。
--   **Docstrings**: 使用**双引号三引号** (`"""`)。
+本规范旨在建立一套**工业级**的 Python 代码标准，特别针对 Agentic Workflow、异步并发和高可靠性系统进行了深度定制。
 
 ---
 
-## 2. 命名规约 (Naming Conventions)
+## 1. 工程结构与配置 (Project Structure & Config)
 
-| 类型 | 规则 | 示例 | 说明 |
-| :--- | :--- | :--- | :--- |
-| **Module** | `snake_case` | `data_loader.py` | 全小写，下划线分隔 |
-| **Package** | `snake_case` | `utils` | 不建议使用下划线，除非必要 |
-| **Class** | `PascalCase` | `DataProcessor` | 首字母大写驼峰 |
-| **Function** | `snake_case` | `calculate_metrics` | 动词开头 |
-| **Variable** | `snake_case` | `user_id` | 名词 |
-| **Constant** | `UPPER_CASE` | `MAX_RETRIES` | 全大写，下划线分隔 |
-| **Private** | `_snake_case` | `_internal_helper` | 单下划线开头 |
+### 1.1 项目布局 (Layout)
+采用标准的 `src` 布局，避免导入混乱。
+```text
+project_root/
+├── src/
+│   └── my_package/
+│       ├── __init__.py
+│       ├── core/       # 核心业务逻辑
+│       ├── api/        # 外部接口/路由
+│       └── utils/      # 通用工具
+├── tests/
+│   ├── unit/           # 单元测试
+│   └── integration/    # 集成测试
+├── pyproject.toml      # 依赖管理与工具配置
+├── README.md
+└── .gitignore
+```
 
-### 2.1 特殊命名规则
--   **布尔值**: 必须以 `is_`, `has_`, `should_`, `can_` 开头。
-    -   ✅ `is_valid`
-    -   ❌ `valid` (名词混淆)
--   **集合变量**: 使用复数或后缀。
-    -   ✅ `users`, `user_list`
-    -   ❌ `user` (当它是一个列表时)
+### 1.2 依赖管理 (Dependency Management)
+-   **工具**: 推荐使用 `Poetry` 或 `uv` 进行依赖管理。
+-   **版本锁定**: 必须提交 `poetry.lock` 或 `uv.lock` 文件，确保环境一致性。
+-   **依赖分组**:
+    -   `main`: 生产环境依赖 (e.g., `fastapi`, `pydantic`).
+    -   `dev`: 开发工具 (e.g., `ruff`, `mypy`).
+    -   `test`: 测试框架 (e.g., `pytest`, `pytest-asyncio`).
+
+### 1.3 代码质量像 (Quality Tools)
+所有项目必须配置以下工具，并在 CI 中强制执行：
+-   **Formatter**: `Ruff` (兼容 Black 风格)。
+-   **Linter**: `Ruff` (替代 flake8, isort)。
+-   **Type Checker**: `MyPy` (strict mode)。
 
 ---
 
-## 3. 类型系统 (Type System)
+## 2. 核心编码规范 (Core Coding Standards)
 
-### 3.1 强制类型提示 (Mandatory Type Hints)
--   **所有**函数/方法的参数和返回值必须标注类型。
--   使用 Python 3.9+ 原生泛型 (`list[]`, `dict[]`, `tuple[]`)，不再导入 `typing.List` 等。
+### 2.1 类型系统 (Type System) - Strict
+-   **全覆盖**: 所有函数必须标注参数和返回值类型。
+-   **泛型**: 使用 `typing.TypeVar` 和 `typing.Generic` 增强复用性。
+-   **运行时检查**: 推荐使用 `Pydantic` 或 `TypeGuard` 进行运行时数据验证。
 
 ```python
-# ✅ Good (Python 3.10+)
-def process_items(items: list[str]) -> dict[str, int]:
-    return {item: len(item) for item in items}
+from typing import TypeVar, Iterable
+from pydantic import BaseModel
+
+T = TypeVar("T")
+
+class User(BaseModel):
+    id: int
+    name: str
+
+def first(iterable: Iterable[T]) -> T | None:
+    """Return the first element of an iterable or None."""
+    for item in iterable:
+        return item
+    return None
 ```
 
-### 3.2 复杂类型定义
--   对于嵌套字典或复杂结构，**禁止**直接使用 `dict`。必须定义 `TypedDict` 或 `dataclass`。
+### 2.2 异步编程 (Asyncio)
+Agent 系统通常是 I/O 密集型的（LLM API 调用），必须拥抱 `asyncio`。
+
+-   **命名**: 异步函数不需要特殊前缀，但必须在 docstring 中注明。
+-   **并发控制**: 使用 `asyncio.gather` 或 `asyncio.TaskGroup` (Python 3.11+) 管理并发。
+-   **严禁阻塞**: 异步函数中严禁调用同步阻塞 I/O (如 `requests.get`, `time.sleep`)。必须使用 `httpx`, `aiofiles` 或 `asyncio.sleep`。
 
 ```python
-from typing import TypedDict
+import asyncio
+from httpx import AsyncClient
 
-class UserConfig(TypedDict):
-    api_key: str
-    timeout: int
-    features: list[str]
+async def fetch_urls(urls: list[str]) -> list[str]:
+    async with AsyncClient() as client:
+        # ✅ Good: 使用 TaskGroup 结构化并发
+        async with asyncio.TaskGroup() as tg:
+            tasks = [tg.create_task(client.get(url)) for url in urls]
+        
+        return [t.result().text for t in tasks]
+```
 
-def configure(config: UserConfig) -> None:
-    ...
+### 2.3 错误处理 (Error Handling) - Defensive
+-   **自定义异常**: 业务模块必须定义基类异常 `AppError`。
+-   **异常链**: 使用 `raise NewException from e` 保留原始堆栈。
+-   **原子性**: 在执行不可逆操作前（如写 DB），确保所有前置检查已通过。
+
+---
+
+## 3. Agent 专属架构模式 (Agent Patterns)
+
+### 3.1 工具接口设计 (Tool Implementation)
+Agent 调用的 Tool 必须遵循 "幂等" 和 "容错" 原则。
+
+-   **入参扁平化**: 避免嵌套 JSON，尽量使用扁平参数，减少 LLM 幻觉。
+-   **结果结构化**: 返回 `ToolResult` 对象，而非纯字符串。
+
+```python
+@dataclass
+class ToolResult:
+    success: bool
+    output: str  # 给 LLM 看的内容
+    data: dict   # 给程序读的结构化数据
+    error: str | None = None
+```
+
+### 3.2 提示词工程代码化 (Prompt as Code)
+-   **模版分离**: Prompt 模版应存储在独立文件或配置中，不应硬编码在 Python 逻辑里。
+-   **版本控制**: Prompt 的变更等同于代码变更，需要 Git 记录。
+-   **动态注入**: 使用 `jinja2` 进行复杂的 Prompt 渲染。
+
+---
+
+## 4. 测试规范 (Testing Guidelines)
+
+### 4.1 Pytest 优先
+-   **Fixtures**: 使用 `conftest.py` 管理共享资源（如 Mock DB, Mock LLM）。
+-   **Parametrization**: 使用 `@pytest.mark.parametrize` 覆盖边界条件。
+
+### 4.2 Mocking 策略
+-   **外部服务**: 严禁在单元测试中调用真实 API (OpenAI, Database)。必须使用 `respx` (HTTP mock) 或 `unittest.mock`。
+-   **确定性**: 测试必须是确定性的。对于涉及 LLM 的测试，Mock 其输出或使用 "Evaluation" 层进行语义断言。
+
+```python
+import pytest
+from unittest.mock import MagicMock
+
+def test_agent_decision(mock_llm):
+    mock_llm.return_value = "Order confirmed"
+    agent = Agent(llm=mock_llm)
+    assert agent.run("Buy it") == "Order confirmed"
 ```
 
 ---
 
-## 4. 文档与注释 (Documentation)
+## 5. 安全性 (Security)
 
-### 4.1 Google Style Docstrings
--   **必须**为所有公共模块、类、函数编写 Docstring。
--   包含 `Args`, `Returns`, `Raises` 三个部分。
--   **Rationale**: 不仅描述"做什么"，还要描述"为什么"以及"副作用"。
+### 5.1 敏感信息
+-   **ENV**: 密钥必须通过环境变量 (`os.getenv`) 读取，严禁硬编码。
+-   **Log Redaction**: 日志中必须脱敏 PII (个人隐私信息) 和 API Keys。
 
-```python
-def connect_db(connection_string: str) -> None:
-    """Establishes a connection to the database.
-
-    This function initializes the connection pool. It is not thread-safe 
-    and should only be called during startup.
-
-    Args:
-        connection_string: The JDBC-style URL for the database.
-
-    Raises:
-        ConnectionError: If the server is unreachable.
-        ValueError: If the connection string format is invalid.
-    """
-    ...
-```
-
----
-
-## 5. 工程实践与安全性 (Engineering & Safety)
-
-### 5.1 异常处理
--   **Fail Fast**: 在函数入口进行 Guards Check。
--   **No Bare Except**: 严禁 `except:` 或 `except Exception:`，除非在最顶层入口记录日志。
-
-### 5.2 日志 (Logging)
--   **禁止 print**: 生产代码中严禁出现 `print()`。
--   **使用 logging**:
-    -   `logging.info()`: 正常流程关键点。
-    -   `logging.warning()`: 预期外的非阻断问题。
-    -   `logging.error()`: 导致功能失败的错误 (务必包含 `exc_info=True`)。
-
-### 5.3 资源管理
--   必须使用 Context Managers (`with` 语句) 管理文件、锁、网络连接。
-
-```python
-# ✅ Good
-with open("data.json", "r", encoding="utf-8") as f:
-    data = json.load(f)
-```
-
-### 5.4 依赖管理
--   项目根目录必须包含 `requirements.txt` 或 `pyproject.toml`。
--   版本号必须固定 (`pandas==2.2.0`)，避免隐式升级导致的不兼容。
-
----
-
-## 6. 工具函数设计规范 (Agent-Specific)
-
-### 6.1 接口设计
--   **原子性**: 一个函数只做一件事。
--   **JSON 友好**: 入参和返回值尽量限制在 JSON 数据类型 (str, int, float, bool, list, dict)。
--   **无状态**: 尽量设计为纯函数 (Pure Function)，不依赖全局变量。
-
-### 6.2 错误返回
--   对于工具调用，如果失败，**不要抛出异常**导致 Agent 崩溃。
--   应该捕获异常并返回包含错误信息的结构化结果。
-
-```python
-def safe_search(query: str) -> dict[str, str]:
-    try:
-        # ... logic ...
-        return {"status": "success", "data": "..."}
-    except Exception as e:
-        return {"status": "error", "message": str(e)}
-```
+### 5.2 注入防护
+-   **SQL**: 使用 ORM (SQLAlchemy) 或参数化查询，严禁 f-string 拼 SQL。
+-   **XML/YAML**: 使用 `defusedxml` 和 `yaml.safe_load` 防止反序列化攻击。
+-   **Command**: 慎用 `subprocess.run(shell=True)`，尽量使用列表参数形式。
