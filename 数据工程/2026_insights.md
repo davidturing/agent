@@ -18,27 +18,70 @@
 
 ## 2. 商业案例分析 (Business Cases)
 
-### 案例 1：全球领先的流媒体平台 (Netflix/Spotify 类)
-- **场景**: 实时个性化推荐。
-- **方案**: 构建了基于 Iceberg + Flink 的实时湖仓。
-- **成果**: 实现了 "数据写入即查询"。用户行为数据延迟从 15 分钟降低到 sub-second (秒级)，推荐系统的点击率 (CTR) 提升了 5%。
+### 科技与互联网
+1.  **Airbnb**: "Minerva" 指标平台，统一定义了公司 30000+ 个指标，确保数据口径一致，支撑所有决策。
+2.  **Netflix**: 使用 Titus 容器平台调度数十万个批处理作业，结合 Iceberg 实现数据湖的秒级快照和回滚。
+3.  **Uber**: 极其成熟的数据平台架构，通过 DSL 自动生成 ETL 任务，降低了数据开发的门槛。
+4.  **Spotify**: 数据工程团队推行 "T-shaped" 人才模型，鼓励数据工程师不仅会写 Pipeline，还要懂后端服务。
+5.  **Pinterest**: 大规模使用 Flink 处理用户点击流，实时更新推荐模型的特征库。
 
-### 案例 2：大型物流企业
-- **场景**: 全球供应链优化。
-- **方案**: 采用 dbt 进行模块化数据建模。
-- **成果**: 将原本 5000+ 个混乱的存储过程重构为可复用、可测试的数据模型图 (DAG)。数据团队的 Onboarding 时间从 3 个月缩短到 2 周。
+### 传统企业数字化
+6.  **Capital One**: 首家全面上云的银行。构建了 Serverless Data Platform，利用 Lambda + Snowflake 处理海量交易数据。
+7.  **BMW**: "Cloud Data Hub" 整合了全球工厂、车辆和销售数据，每天处理数 TB 新增数据，供 AI 团队使用。
+8.  **J&J (强生)**: 建立全球统一的数据目录 (Data Catalog)，让 10万+ 员工能够像搜商品一样搜索数据资产。
+9.  **Shell**: 传感器数据工程，标准化来自不同年代、不同厂商的钻井设备数据，格式化后存入数据湖。
+10. **Starbucks**: 构建了 "Brew Data Platform"，将 POS 数据、会员数据、库存数据实时打通，支持即时营销。
+
+### 初创与独角兽
+11. **Doordash**: 实时特征工程平台，确保外卖配送时间的预估 (ETA) 误差控制在分钟级。
+12. **Instacart**: 复杂的库存同步 Pipeline，需要处理数万家超市不规范的库存数据更新。
+13. **Lyft**: Amundsen 数据目录的创造者（现已开源），解决了 "数据在哪里" 和 "这数据靠谱吗" 的核心问题。
+14. **Robinhood**: 处理高频股票行情数据，确保 app 端显示的价格与交易所实时同步，容忍度极低。
+15. **Stripe**: 数据质量工程，拥有数百个自动探测器，一旦支付成功率异常波动，立即报警并回滚数据变更。
+
+### 媒体与广告
+16. **The New York Times**: 使用 GCP + BigQuery 构建现代化数据栈，分析读者阅读行为，优化订阅墙策略。
+17. **Disney**: 统一 ID 平台 (Unified ID)，打通主题乐园、Disney+、ESPN 的用户数据，构建 360 度用户画像。
+18. **Nielsen**: 广告监测数据处理，每天处理数百亿次广告曝光请求，计算覆盖率和频次 (Reach & Frequency)。
+
+### 医疗健康
+19. **Optum**: 医疗理赔数据清洗，处理海量手写单据 OCR 后的脏数据，标准化为 FHIR 格式。
+20. **Flatiron Health**: 肿瘤数据工程，从非结构化的医生病历中提取癌症分期、治疗方案等结构化数据。
 
 ---
 
 ## 3. Vendor 与产品能力分析
 
-| Vendor | 核心产品 | 2026 核心能力评价 |
-| :--- | :--- | :--- |
-| **Databricks** | Data Intelligence Platform | "Lakehouse" 概念的发明者。MosaicAI 让其拥有了最强的数据+AI 融合能力。Photon 引擎速度极快。 |
-| **Snowflake** | Snowflake Data Cloud | 依然是最好用的云数仓。通过 Unistore 实现了混合事务/分析处理 (HTAP)。对 Python (Snowpark) 的支持已非常成熟。 |
-| **dbt Labs** | dbt Cloud | 数据转换 (Transformation) 的事实标准。语义层 (Semantic Layer) 的推出解决了 "指标定义不一致" 的顽疾。 |
-| **Confluent** | Confluent Cloud | Kafka 的商业化母公司。Kora 引擎让 Kafka 变成了真正的 Serverless 服务，无需关心 Broker 扩缩容。 |
-| **StarRocks** | StarRocks | 极速 OLAP 分析的代表。其存算分离架构和物化视图能力，在实时大屏和自助分析场景表现优异。 |
+### 数据转换与编排 (Transformation & Orchestration)
+1.  **dbt Labs**: 彻底改变了数据工程。SQL-first 开发体验，JinJa 模版引擎，自动生成文档和血缘。
+2.  **Airflow (Astronomer)**: 任务调度编排的事实标准。Python 定义 DAG，插件生态无限丰富。
+3.  **Prefect**: 现代化的工作流编排工具，比 Airflow 更轻量，支持动态 DAG 和即时执行。
+4.  **Dagster**: 强调 "数据感知" 的编排工具，以数据资产而非任务为中心，内置良好的测试和调试体验。
+5.  **Mage.ai**: "Notabooks as Code" 的理念，让开发 pipeline 像写 Jupyter notebook 一样顺滑。
+6.  **SQLMesh**: dbt 的挑战者，更强调增量计算和环境隔离，适合超大规模数据仓库。
+7.  **Coalesce**: 专为 Snowflake 设计的可视化转换工具，自动针对 Snowflake 架构优化生成的 SQL。
+
+### 数据湖仓格式 (Table Formats)
+8.  **Apache Iceberg**: 最流行的开放表格式，支持 ACID 事务、时间旅行、Schema 进化。
+9.  **Delta Lake (Databricks)**: 性能极强，Z-Order 索引优化查询速度，与 Spark 集成最紧密。
+10. **Apache Hudi**: 专为流式写入设计，支持 Upsert/Delete，在 CDC 入湖场景表现最好。
+
+### 数据质量与可观测性 (Quality & Observability)
+11. **Monte Carlo**: 数据可观测性平台领导者。
+12. **Great Expectations**: 数据质量断言 (Assertions) 的标准库，Python 编写，集成在 Pipeline 中拦截脏数据。
+13. **Soda**: 声明式的数据质量检查工具，支持 SQL 和 YAML 定义规则。
+14. **Bigeye**: 自动化检测数据异常，专注于减少 Data Engineering 团队的运维负担。
+15. **Datafold**: 专注于 "Data Diff"，在代码合并前自动对比新旧逻辑产出的数据差异，防止 Bug 上线。
+
+### 数据目录与治理 (Catalog & Governance)
+16. **Atlan**: 现代主动元数据平台 (Active Metadata Platform)，体验类似 Notion，深受数据团队喜爱。
+17. **DataHub (LinkedIn)**: 开源元数据平台，架构先进，支持基于事件的元数据更新。
+18. **Amundsen (Lyft)**: 开源数据搜索与发现工具，简单易用。
+19. **Select Star**: 自动分析 SQL 查询日志生成血缘图，零配置即可使用。
+
+### 基础设施管理 (Infrastructure)
+20. **Terraform**: 基础设施即代码 (IaC)，管理云上资源（S3, EMR, RDS）的标准。
+21. **Pulumi**: 使用通用编程语言 (Python/TS) 写 IaC，比 HCL 更灵活。
 
 ---
 
@@ -48,3 +91,7 @@
 - **[Zero-ETL]**: 一种愿景，通过集成直接复制数据（如 AWS Aurora to Redshift），消除手写的 ETL 管道。
 - **[Backfill]**: 数据回填，在流式计算中，用历史数据重新跑一边逻辑以修正结果或训练模型。
 - **[Idempotency (幂等性)]**: 数据工程中的黄金法则，确保任务重复运行多次，产生的结果与运行一次相同。
+- **[DAG (Directed Acyclic Graph)]**: 有向无环图，描述数据任务依赖关系的标准拓扑结构。
+- **[CDC (Change Data Capture)]**: 实时捕获数据库变更日志的技术。
+- **[Medallion Architecture]**: 奖牌架构，将数据分为 Bronze (原始), Silver (清洗), Gold (聚合) 三层的设计模式。
+- **[Slowly Changing Dimension (SCD)]**: 缓慢变化维，处理维度属性随时间变化（如用户改名、搬新家）的技术（Type 1/2/3）。
