@@ -1,154 +1,172 @@
-# Python 软件开发规范 (Agent-Ready Edition)
+# Python 软件开发规范 (Enterprise Agent Edition)
 
-本规范基于 **PEP 8** 和 **Google Python Style Guide**，并结合智能体 (Agent) 代码生成的特性进行了优化。旨在作为 Agent 自我审查 (Self-Review) 的核心依据。
+**版本**: 2.0  
+**生效日期**: 2026-01-27  
+**基准**: Google Python Style Guide + PEP 8  
 
-## 1. 命名规范 (Naming Conventions)
-
-### 1.1 基础规则
-- **模块 (Module)**: `lowercase_underscore.py` (e.g., `data_loader.py`)
-- **类 (Class)**: `CapWords` (PascalCase) (e.g., `DataProcessor`)
-- **函数/方法 (Function/Method)**: `lowercase_underscore` (snake_case) (e.g., `process_data`)
-- **变量 (Variable)**: `lowercase_underscore` (e.g., `user_input`)
-- **常量 (Constant)**: `UPPER_CASE_UNDERSCORE` (e.g., `MAX_RETRIES = 3`)
-- **私有成员**: `_single_leading_underscore` (e.g., `_internal_helper`)
-
-### 1.2 特殊命名
-- **Agent 工具函数**: 必须具有描述性的名称，动词开头，清晰表达意图。
-    - ✅ `search_knowledge_base(query: str)`
-    - ❌ `search(q: str)`
-- **布尔变量**: 使用 `is_`, `has_`, `can_` 前缀。
-    - ✅ `is_valid`, `has_permission`
-    - ❌ `valid`, `permission`
+本规范旨在建立一套**严格、清晰、可自动化检查**的 Python 代码标准。适用于所有由 Agent 生成或人工编写的 Python 项目。
 
 ---
 
-## 2. 代码布局与格式 (Layout & Formatting)
+## 1. 代码风格与布局 (Style & Layout)
 
-### 2.1 缩进与行宽
-- **缩进**: 必须使用 **4 个空格**，严禁使用 Tab。
-- **行宽**: 建议 **80-100 字符**。Agent 生成的代码应避免过长行，以提升可读性和 Token 效率。
-
-### 2.2 导入 (Imports)
-- **顺序**: 标准库 -> 第三方库 -> 本地模块。
-- **避免**: `from module import *` (污染命名空间)。
-- **推荐**: `import numpy as np` (使用标准别名)。
+### 1.1 缩进与断行
+-   **缩进**: 强制使用 **4 个空格**。严禁使用 Tab。
+-   **行宽**: 限制为 **88 字符** (遵循 `Black` 格式化标准)。超过时必须换行。
+-   **断行策略**:
+    -   优先在二元运算符**之前**换行。
+    -   参数列表过长时，采用"垂直挂起"格式（Vertical Hanging Indent）。
 
 ```python
 # ✅ Good
-import os
-import sys
-import pandas as pd
-from my_module import MyClass
-
-# ❌ Bad
-from my_module import *
+def long_function_name(
+    var_one: int,
+    var_two: str,
+    var_three: float,
+) -> None:
+    result = (
+        some_very_long_variable_name
+        + another_variable_name
+        - third_variable_name
+    )
 ```
 
-### 2.3 空行
-- 顶级定义（类、函数）之间空 **2 行**。
-- 类内部方法之间空 **1 行**。
+### 1.2 导入规范 (Imports)
+-   **分区顺序**:
+    1.  标准库 (Standard Library)
+    2.  第三方库 (Third Party)
+    3.  本地应用/库 (Local Application)
+-   **组内排序**: 按字母顺序排列。
+-   **禁止**: `from module import *` (通配符导入)。
+-   **别名**: 仅对通用库使用标准别名 (`numpy as np`, `pandas as pd`, `tensorflow as tf`)。
+
+### 1.3 字符串 (Strings)
+-   **F-Strings**: 优先使用 f-string (`f"{name}"`) 进行字符串拼接，性能和可读性最佳。
+-   **Docstrings**: 使用**双引号三引号** (`"""`)。
 
 ---
 
-## 3. 类型提示 (Type Hints)
+## 2. 命名规约 (Naming Conventions)
 
-### 3.1 强制要求
-- **所有公共函数/方法**必须包含类型提示 (Type Hints)。这对于 Agent 理解函数签名至关重要。
-- 使用 `typing` 模块 (如 `List`, `Dict`, `Optional`, `Union`) 或 Python 3.9+ 的原生泛型。
+| 类型 | 规则 | 示例 | 说明 |
+| :--- | :--- | :--- | :--- |
+| **Module** | `snake_case` | `data_loader.py` | 全小写，下划线分隔 |
+| **Package** | `snake_case` | `utils` | 不建议使用下划线，除非必要 |
+| **Class** | `PascalCase` | `DataProcessor` | 首字母大写驼峰 |
+| **Function** | `snake_case` | `calculate_metrics` | 动词开头 |
+| **Variable** | `snake_case` | `user_id` | 名词 |
+| **Constant** | `UPPER_CASE` | `MAX_RETRIES` | 全大写，下划线分隔 |
+| **Private** | `_snake_case` | `_internal_helper` | 单下划线开头 |
+
+### 2.1 特殊命名规则
+-   **布尔值**: 必须以 `is_`, `has_`, `should_`, `can_` 开头。
+    -   ✅ `is_valid`
+    -   ❌ `valid` (名词混淆)
+-   **集合变量**: 使用复数或后缀。
+    -   ✅ `users`, `user_list`
+    -   ❌ `user` (当它是一个列表时)
+
+---
+
+## 3. 类型系统 (Type System)
+
+### 3.1 强制类型提示 (Mandatory Type Hints)
+-   **所有**函数/方法的参数和返回值必须标注类型。
+-   使用 Python 3.9+ 原生泛型 (`list[]`, `dict[]`, `tuple[]`)，不再导入 `typing.List` 等。
 
 ```python
-# ✅ Good
-def calculate_metrics(data: List[float], threshold: float = 0.5) -> Dict[str, float]:
-    ...
+# ✅ Good (Python 3.10+)
+def process_items(items: list[str]) -> dict[str, int]:
+    return {item: len(item) for item in items}
 ```
 
-### 3.2 复杂类型
-- 对于复杂的字典结构，建议使用 `TypedDict` 或 `dataclass` 定义，而非裸 `Dict`。
+### 3.2 复杂类型定义
+-   对于嵌套字典或复杂结构，**禁止**直接使用 `dict`。必须定义 `TypedDict` 或 `dataclass`。
 
 ```python
 from typing import TypedDict
 
-class UserProfile(TypedDict):
-    id: int
-    name: str
-    roles: List[str]
+class UserConfig(TypedDict):
+    api_key: str
+    timeout: int
+    features: list[str]
 
-def get_user(user_id: int) -> UserProfile:
+def configure(config: UserConfig) -> None:
     ...
 ```
 
 ---
 
-## 4. 文档字符串 (Docstrings)
+## 4. 文档与注释 (Documentation)
 
-### 4.1 Google Style
-- 所有公共模块、类、函数必须包含 Docstring。
-- 采用 **Google Style** 格式，因为它被 LLM 理解得最好。
+### 4.1 Google Style Docstrings
+-   **必须**为所有公共模块、类、函数编写 Docstring。
+-   包含 `Args`, `Returns`, `Raises` 三个部分。
+-   **Rationale**: 不仅描述"做什么"，还要描述"为什么"以及"副作用"。
 
 ```python
-def fetch_data(url: str, retry: int = 3) -> Optional[bytes]:
-    """Fetches data from a URL with retries.
+def connect_db(connection_string: str) -> None:
+    """Establishes a connection to the database.
+
+    This function initializes the connection pool. It is not thread-safe 
+    and should only be called during startup.
 
     Args:
-        url: The target URL string.
-        retry: Max number of retries. Defaults to 3.
-
-    Returns:
-        The raw bytes content if successful, None otherwise.
+        connection_string: The JDBC-style URL for the database.
 
     Raises:
-        ConnectionError: If the network is unreachable.
+        ConnectionError: If the server is unreachable.
+        ValueError: If the connection string format is invalid.
     """
     ...
 ```
 
 ---
 
-## 5. 异常处理 (Error Handling)
+## 5. 工程实践与安全性 (Engineering & Safety)
 
-### 5.1 精确捕获
-- 严禁使用裸 `except:`。
-- 捕获特定的异常类型。
+### 5.1 异常处理
+-   **Fail Fast**: 在函数入口进行 Guards Check。
+-   **No Bare Except**: 严禁 `except:` 或 `except Exception:`，除非在最顶层入口记录日志。
+
+### 5.2 日志 (Logging)
+-   **禁止 print**: 生产代码中严禁出现 `print()`。
+-   **使用 logging**:
+    -   `logging.info()`: 正常流程关键点。
+    -   `logging.warning()`: 预期外的非阻断问题。
+    -   `logging.error()`: 导致功能失败的错误 (务必包含 `exc_info=True`)。
+
+### 5.3 资源管理
+-   必须使用 Context Managers (`with` 语句) 管理文件、锁、网络连接。
 
 ```python
 # ✅ Good
-try:
-    result = 1 / x
-except ZeroDivisionError:
-    logging.error("Cannot divide by zero")
-
-# ❌ Bad
-try:
-    result = 1 / x
-except:
-    pass
+with open("data.json", "r", encoding="utf-8") as f:
+    data = json.load(f)
 ```
 
-### 5.2 Fail Fast
-- 在函数开头进行参数校验（Guard Clauses），尽早返回或报错，减少缩进层级。
+### 5.4 依赖管理
+-   项目根目录必须包含 `requirements.txt` 或 `pyproject.toml`。
+-   版本号必须固定 (`pandas==2.2.0`)，避免隐式升级导致的不兼容。
 
 ---
 
-## 6. Agent 专属规范 (Agent-Specific)
+## 6. 工具函数设计规范 (Agent-Specific)
 
-### 6.1 工具函数设计
-- **单一职责**: 一个工具函数只做一件事。
-- **JSON 友好**: 输入输出尽量使用 JSON 可序列化的类型 (str, int, float, list, dict)，避免返回复杂的对象实例，除非是为了内部传递。
-- **幂等性**: 如果可能，设计成幂等的（重复调用不产生副作用）。
+### 6.1 接口设计
+-   **原子性**: 一个函数只做一件事。
+-   **JSON 友好**: 入参和返回值尽量限制在 JSON 数据类型 (str, int, float, bool, list, dict)。
+-   **无状态**: 尽量设计为纯函数 (Pure Function)，不依赖全局变量。
 
-### 6.2 解释性代码
-- 关键逻辑步骤必须添加注释。
-- 不要写显而易见的注释 (e.g., `i += 1 # Increment i`)。
-- **Rationale**: 解释 "为什么" 这样做，而不仅仅是 "做了什么"。
+### 6.2 错误返回
+-   对于工具调用，如果失败，**不要抛出异常**导致 Agent 崩溃。
+-   应该捕获异常并返回包含错误信息的结构化结果。
 
----
-
-## 7. 自我审查清单 (Self-Review Checklist)
-
-Agent 在提交 Python 代码前，必须检查：
-- [ ] 命名是否符合 PEP 8？
-- [ ] 是否添加了 Type Hints？
-- [ ] Docstring 是否完整（包含 Args, Returns）？
-- [ ] 异常处理是否安全（无 bare except）？
-- [ ] 是否有多余的 print 语句（应使用 logging）？
-- [ ] 复杂逻辑是否有注释解释 "Why"？
+```python
+def safe_search(query: str) -> dict[str, str]:
+    try:
+        # ... logic ...
+        return {"status": "success", "data": "..."}
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+```
