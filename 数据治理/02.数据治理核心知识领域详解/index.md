@@ -71,11 +71,97 @@ graph LR
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
 
-> [!WARNING]
-> 技术只是手段，业务才是目的。不要为了搞架构而搞架构。
 
-1.  **Inmon, W.H.**. _Building the Data Warehouse_. (数仓之父经典)
-2.  **Kimball, Ralph**. _The Data Warehouse Toolkit_. (维度建模经典)
-3.  **ISO/IEC 25012**. _Data Quality Model_. (国际数据质量标准)
+## ❓ 5. 常见问题 (FAQ)
+### Q1: 到底什么是主数据（MDM）？
+**A:** 解决多系统间“共用实体”（如客户、产品）信息不一致的问题。MDM 是企业的“Single Source of Truth”。
+### Q2: 质量问题为何难改？
+**A:** 通常因为“责权分离”。录入者（如客服）只背“接听量”KPI，不背“地址准确率”KPI，所以没动力改。
+
+---
+
+## 📚 6. 参考文档 (References)
+
+> [!NOTE]
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
+
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| Master Data Management | David Loshin | 2008 | | MDM 经典。 |
+| The Data Warehouse Toolkit | Ralph Kimball | 2013 | | 维度建模圣经。 |
+| Apache Atlas | Apache | 2023 | | 开源元数据治理。 |
+| Six Primary Dimensions for DQ | DAMA UK | 2013 | | 六大质量维度定义。 |
+| Building the Data Warehouse | Inmon | 2005 | | 范式建模理论体系。 |
+| Data Lineage Benefits | Octopai | 2021 | | 血缘分析价值。 |
+| NIST Privacy Framework | NIST | 2020 | | 隐私框架。 |
+| Metadata Maturity | Dataversity | 2018 | | 元数据成熟度。 |
+| Informatica MDM | Informatica | 2023 | | 商业 MDM 解决方案。 |
+| Data Fabric Architecture | Gartner | 2022 | | 数据编织架构报告。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** 主数据体量通常远大于交易数据。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** 质量清洗最好在报表端进行。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** 元数据也描述业务属性。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** 维度表通常存储环境上下文。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** 哪个最适合做主数据？
+    * A. 点击日志
+    * B. 员工名录
+    * C. 每日库存
+    * D. CPU监控
+
+6. **[单选]** 日期为'2月30日'属于？
+    * A. 唯一性
+    * B. 及时性
+    * C. 完整性
+    * D. 有效性
+
+7. **[单选]** Kimball 核心模型？
+    * A. 星型模型
+    * B. 3NF
+    * C. Data Vault
+    * D. NoSQL
+
+8. **[多选]** 元数据用途？
+    * A. 影响性分析
+    * B. 搜索资产
+    * C. 理解术语
+    * D. 自动写代码
+
+9. **[单选]** 脱敏是为了？
+    * A. 压缩
+    * B. 隐私保护
+    * C. 加速
+    * D. 纠错
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **错**。解析：交易数据量大，主数据量小且稳定。
+2. **错**。解析：应在源头或数仓层清洗，报表端清洗会导致逻辑不一致。
+3. **对**。解析：元数据包含业务、技术、操作三类。
+4. **对**。解析：事实表存数据，维度表存环境。
+5. **B**。解析：员工是核心实体，高复用。
+6. **D**。解析：逻辑无效。
+7. **A**。解析：星型模型是 Kimball 标志。
+8. **ABC**。解析：D 不是核心用途。
+9. **B**。解析：Masking 保护敏感信息。

@@ -73,14 +73,105 @@ graph TD
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
+
+
+## ❓ 5. 常见问题 (FAQ)
+
+### Q1: 数据治理项目通常也是“一把手”工程，具体在企业中如何体现？
+**A:** 
+*   **理论**: 治理需要跨部门协调（协调 IT、业务、法务），只有高层才有此权力。
+*   **场景**: 在某大型商业银行，CEO 亲自担任“数据治理委员会”主席。如果不这样，业务部门（信贷部、吸储部）根本不会配合 IT 部门修改数据录入规范。
+*   **结论**: 没有“尚方宝剑”，治理寸步难行。
+
+### Q2: 如何区分“业务数据”和“元数据”？
+**A:**
+*   **场景**: 淘宝购物。
+*   **业务数据**: "订单号: 1001, 金额: 50.00"。实际交易。
+*   **元数据**: "订单表 (Order_Table) 包含字段 OrderId (Int)"。描述交易的数据。
+
+---
+
+## 📚 6. 参考文档 (References)
 
 > [!NOTE]
-> 理论学习是基础，但切忌教条主义。DAMA 只是指南针，不是地图。
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-1.  **DAMA International**. _DAMA-DMBOK: Data Management Body of Knowledge (2nd Edition)_. Technics Publications, 2017.
-    *   *评注*: 行业圣经，虽然略显晦涩，但覆盖面最全。
-2.  **Gartner**. _Gartner's Data and Analytics Governance Survey_.
-    *   *评注*: 提供每年的行业趋势数据，适合用来写立项报告 PPT。
-3.  **Data Governance Institute (DGI)**. _The DGI Framework_.
-    *   *评注*: 相比 DAMA，DGI 的框架更侧重于组织和流程设计。
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| DAMA-DMBOK2 | DAMA International | 2017 | | 行业圣经，核心参考架构。 |
+| Non-Invasive Data Governance | Robert Seiner | 2014 | | 非入侵式治理，强调利用已有流程。 |
+| Designing Data Governance | Khatri & Brown | 2010 | | 学术界定义的 5 大治理决策域。 |
+| The DGI Framework | DGI | 2004 | | 早期的经典治理框架。 |
+| 华为数据之道 | 华为数据管理部 | 2020 | | 国内企业数字化转型必读实战案例。 |
+| ISO/IEC 38500 | ISO | 2015 | | IT 治理国际标准。 |
+| Gartner Data Governance Survey | Gartner | 2023 | | 年度行业治理现状统计。 |
+| What's Your Data Strategy? | HBR | 2017 | | 哈佛商业评论关于数据战略的论述。 |
+| Data Governance Maturity Model | IBM | 2007 | | 成熟度评估模型。 |
+| Data Stewardship | David Plotkin | 2013 | | 数据管家实操指南。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** 数据治理的核心目标是限制业务人员访问数据，以确保安全。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** “非入侵式治理”意味着不需要任何人对数据质量负责。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** 技术债如果早期不处理，后期处理成本会指数级上升。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** 数据管理包含数据治理。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** 因反洗钱被罚款，属于治理在哪个维度的价值？
+    * A. 增收
+    * B. 降本
+    * C. 避险
+    * D. 增效
+
+6. **[单选]** 谁最适合担任公司级委员会主席？
+    * A. 实习生
+    * B. IT经理
+    * C. DBA
+    * D. CEO
+
+7. **[单选]** 描述“数据的定义”的数据是？
+    * A. 主数据
+    * B. 交易数据
+    * C. 元数据
+    * D. 参考数据
+
+8. **[多选]** 核心原则包括？
+    * A. 责权对等
+    * B. 透明性
+    * C. 审计性
+    * D. 随意性
+
+9. **[单选]** RACI的A代表？
+    * A. Action
+    * B. Accountable
+    * C. Agile
+    * D. Audit
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **错**。解析：核心目标是平衡安全与价值。过度限制会导致数据失去价值。
+2. **错**。解析：非入侵式治理是指正式化现有的责任，而不是没有责任。
+3. **对**。解析：这是软件工程和数据工程的共识。
+4. **错**。解析：治理指导管理（DAMA观点），或者二者并行。
+5. **C**。解析：合规免罚属于风险控制。
+6. **D**。解析：涉及跨部门权力协调，必须由高层挂帅。
+7. **C**。解析：元数据是“关于数据的数据”。
+8. **ABC**。解析：随意性显然错误。
+9. **B**。解析：Responsible (执行), Accountable (负责), Consulted, Informed。

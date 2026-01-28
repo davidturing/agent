@@ -55,10 +55,97 @@ graph TD
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
+
+
+## ❓ 5. 常见问题 (FAQ)
+### Q1: Auto-Governance (自动化治理) 是什么？
+**A:** 利用 AI Agent 自动扫描数据、发现异常（如空值激增），甚至自动生成修复代码。人类只需要审批。
+### Q2: 什么是零拷贝 (Zero-Copy)？
+**A:** 以前做分析要把数据从数据库搬到数仓。Zero-Copy 技术允许不同的计算引擎直接读取同一份底层存储（如 S3 上的 Parquet），无需搬运，大大节省存储和时间。
+
+---
+
+## 📚 6. 参考文档 (References)
 
 > [!NOTE]
-> 预测未来最好的方式，就是去创造它。
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-1.  **Gartner**. _Top Strategic Technology Trends for 2026_.
-2.  **DataOps Manifesto**. (dataopsmanifesto.org)
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| Top Strategic Tech Trends | Gartner | 2026 | | 未来预测。 |
+| DataOps Manifesto | DataOps.org | 2019 | | 敏捷数据宣言。 |
+| Machine Unlearning | Google | 2021 | | 机器遗忘技术。 |
+| Edge Computing Governance | IEEE | 2022 | | 边缘治理。 |
+| Zero Copy Data Sharing | Snowflake | 2023 | | 零拷贝技术。 |
+| Autonomous Data Management | Oracle | 2022 | | 自治数据库。 |
+| Privacy Enhancing Technologies (PETs) | UK Gov | 2023 | | PETs 技术。 |
+| Active Metadata | Atlan | 2022 | | 主动元数据。 |
+| Quantum Safe Cryptography | NIST | 2023 | | 后量子密码。 |
+| Augmented Data Quality | Gartner | 2022 | | 增强型质量。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** AI Agent 将辅助甚至自动化部分治理工作。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** 治理将下沉到边缘端 (Edge)。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** 零拷贝技术能减少数据冗余。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** DataOps 的核心理念是敏捷与自动化。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** Auto-Governance 依赖的核心技术？
+    * A. AI / ML
+    * B. 手工 Excel
+    * C. 纸笔
+    * D. 电话
+
+6. **[单选]** 边缘计算治理的优势？
+    * A. 高延迟
+    * B. 低延时与隐私
+    * C. 增加成本
+    * D. 无论
+
+7. **[单选]** 遗忘学习 (Machine Unlearning) 主要为了满足？
+    * A. 备份
+    * B. 扩容
+    * C. 用户删除权 (RTVF)
+    * D. 加密
+
+8. **[多选]** 未来技术趋势？
+    * A. 数据编织
+    * B. 增强分析
+    * C. 隐私计算
+    * D. 量子安全
+
+9. **[单选]** 治理的周期将变为？
+    * A. 每年一次
+    * B. 每月一次
+    * C. 实时/准实时
+    * D. 永不
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **对**。解析：Auto-correction。
+2. **对**。解析：数据产生即治理。
+3. **对**。解析：Single storage。
+4. **对**。解析：DevOps for Data。
+5. **A**。解析：智能体驱动。
+6. **B**。解析：Data gravity at edge。
+7. **C**。解析：Right to be Forgotten。
+8. **ABCD**。解析：Gartner 预测。
+9. **C**。解析：Active Governance。

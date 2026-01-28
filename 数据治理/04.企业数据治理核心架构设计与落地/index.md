@@ -67,13 +67,97 @@ graph TD
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
+
+
+## ❓ 5. 常见问题 (FAQ)
+### Q1: 湖仓一体（Lakehouse）解决了什么？
+**A:** 解决了 Data Lake 查得慢且不支持事务（ACID），以及 Data Warehouse 存非结构化数据贵的问题。
+### Q2: 为什么烟囱式架构要不得？
+**A:** 导致数据孤岛。营销部一套用户表，客服部一套用户表，无法打通计算“全生命周期价值”。
+
+---
+
+## 📚 6. 参考文档 (References)
 
 > [!NOTE]
-> 只有适合自己企业的架构，才是最好的架构。切忌盲目照搬大厂。
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-1.  **阿里巴巴数据技术及产品部**. _大数据之路：阿里巴巴大数据实践_. 电子工业出版社.
-    *   *评注*: 互联网数据中台的扛鼎之作，必读。
-2.  **华为公司数据管理部**. _华为数据之道_. 机械工业出版社.
-    *   *评注*: 传统企业数字化转型的教科书，非常严谨。
-3.  **The Open Group**. _TOGAF Version 9.2_.
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| Lakehouse: A New Generation | Databricks | 2021 | | 湖仓一体论文。 |
+| Lambda Architecture | Nathan Marz | 2011 | | 批流分离架构。 |
+| Kappa Architecture | Jay Kreps | 2014 | | 流批一体。 |
+| Alibaba Big Data | Alibaba | 2017 | | OneData 体系。 |
+| TOGAF 9.2 | The Open Group | 2018 | | 企业架构标准。 |
+| Designing Data-Intensive Applications | Martin Kleppmann | 2017 | | DDIA 神书。 |
+| Data Fabric vs Mesh | Gartner | 2022 | | 架构对比。 |
+| Modern Data Warehouse | Microsoft | 2023 | | 云数仓参考架构。 |
+| Huawei Data Way | Huawei | 2020 | | 华为架构实践。 |
+| Zachman Framework | John Zachman | 1987 | | 企业架构始祖。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** ODS 是贴源层，数据结构通常与源码一致。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** Lambda 架构需要维护两套代码（批和流）。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** Data Fabric 侧重于利用元数据进行虚拟化集成。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** 烟囱式架构有利于数据复用。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** 哪个适合做实时推荐？
+    * A. 只有离线层
+    * B. 只有 Excel
+    * C. Kappa 架构
+    * D. 所谓 T+1
+
+6. **[单选]** 阿里 OneData 核心目的是？
+    * A. 统一指标口径
+    * B. 增加服务器
+    * C. 使用 Oracle
+    * D. 备份数据
+
+7. **[单选]** 湖仓一体优势？
+    * A. 只支持 SQL
+    * B. 结合了湖的低成本和仓的 ACID
+    * C. 完全免费
+    * D. 不需要存储
+
+8. **[多选]** 架构分层意义？
+    * A. 复用
+    * B. 解耦
+    * C. 清晰
+    * D. 混淆
+
+9. **[单选]** DWD 层通常是指？
+    * A. 原始层
+    * B. 明细层 (Detail)
+    * C. 汇总层
+    * D. 报表层
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **对**。解析：Operational Data Store 镜像源系统。
+2. **对**。解析：这是 Lambda 的主要缺点。
+3. **对**。解析：Fabric 强调逻辑连接而非物理搬运。
+4. **错**。解析：烟囱式导致孤岛，无法复用。
+5. **C**。解析：Kappa 全流式处理。
+6. **A**。解析：OneModel, OneID, OneService。
+7. **B**。解析：Transaction support on low cost storage。
+8. **ABC**。解析：D 是反义词。
+9. **B**。解析：Data Warehouse Detail。

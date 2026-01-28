@@ -70,11 +70,97 @@ graph TD
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
+
+
+## ❓ 5. 常见问题 (FAQ)
+### Q1: Data Mesh 对比 DAMA？
+**A:** DAMA 是中央集权（联邦制），适合强管控行业（如银行）。Data Mesh 是去中心化（诸侯制），适合敏捷迭代的互联网企业。
+### Q2: 为什么 DAMA 被认为有些过时？
+**A:** 它流程重、文档多，跟不上现在的 DevOps 和微服务节奏。
+
+---
+
+## 📚 6. 参考文档 (References)
 
 > [!NOTE]
-> 任何理论模型都是对现实的简化（Reduction），必然存在失真。
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-1.  **Zhamak Dehghani**. _Data Mesh: Delivering Data-Driven Value at Scale_. (Data Mesh 理论奠基之作)
-2.  **ISACA**. _COBIT 2019 Framework_. (IT 治理标准)
-3.  **Thomas C. Redman**. _Data Quality: The Field Guide_. (批判性视角看数据质量)
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| Data Mesh | Zhamak Dehghani | 2022 | | 分布式治理奠基作。 |
+| COBIT 2019 | ISACA | 2019 | | IT 治理框架。 |
+| Data Mesh Principles | ThoughtWorks | 2021 | | 四大原则解读。 |
+| One Size Does Not Fit All | Weber et al. | 2009 | | 权变治理理论。 |
+| Data Driven | Tom Redman | 2008 | | 数据驱动业务。 |
+| The Evolution of Data Governance | TDWI | 2020 | | 治理由虚向实。 |
+| Federated Data Governance | Databricks | 2022 | | 联邦治理实践。 |
+| Agile Data Governance | Forrester | 2019 | | 敏捷治理报告。 |
+| IT Governance Standard | ISO 38500 | 2015 | | 国际标准。 |
+| The Modern Data Stack | dbt Labs | 2023 | | 现代技术栈。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** Data Mesh 类似微服务思想。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** 银行适合完全去中心化治理。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** 治理是静态不变的。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** COBIT 早于 DAMA。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** Data Mesh 提出者？
+    * A. Zhamak Dehghani
+    * B. Elon Musk
+    * C. Bill Gates
+    * D. Inmon
+
+6. **[单选]** 联邦治理特点？
+    * A. 完全集权
+    * B. 完全放任
+    * C. 统分结合
+    * D. 无架构
+
+7. **[单选]** COBIT 核心侧重？
+    * A. 开发
+    * B. IT审计与控制
+    * C. 市场
+    * D. 招聘
+
+8. **[多选]** 治理演进趋势？
+    * A. 自动化
+    * B. 敏捷化
+    * C. 手工化
+    * D. 纸质化
+
+9. **[单选]** Data Mesh 中谁负责 Domain？
+    * A. 业务领域团队
+    * B. 中央 IT
+    * C. 外包
+    * D. 财务
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **对**。解析：都强调去中心化和领域驱动。
+2. **错**。解析：银行强合规，必须保留部分中心化管控。
+3. **错**。解析：随着技术和业务变化不断演进。
+4. **对**。解析：COBIT 起源于 90 年代 IT 审计。
+5. **A**。解析：Works at ThoughtWorks.
+6. **C**。解析：中央定标准，地方管执行。
+7. **B**。解析：ISACA 出品，主打审计。
+8. **AB**。解析：CD是倒退。
+9. **A**。解析：领域负责制。

@@ -67,11 +67,97 @@ DAMA 定义了数据质量的六个核心维度，我们必须熟记于心：
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
+
+
+## ❓ 5. 常见问题 (FAQ)
+### Q1: 什么叫“数据落标”？
+**A:** 定了标准（比如日期格式 YYYY-MM-DD）没用，要通过代码检查（DQC）或录入端校验，强制拦截不符合标准的数据，这叫落标。
+### Q2: 质量评估中“唯一性”很难吗？
+**A:** 很难。比如“张三”和“Zhang San”是不是一个人？需要复杂的 Entity Resolution（实体解析）算法来识别。
+
+---
+
+## 📚 6. 参考文档 (References)
 
 > [!NOTE]
-> 质量不是测出来的，是设计出来的 (Quality is designed in, not tested in)。
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-1.  **Mahanti, Rupa**. _Data Quality: Dimensions, Measurement, Strategy, Management, and Governance_. ASQ Quality Press.
-2.  **Larry English**. _Improving Data Warehouse and Business Information Quality_. (TIQM 理论)
-3.  **ISO 8000**. _Data Quality Standard_.
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| Data Quality Field Guide | Thomas Redman | 2016 | | 质量实战。 |
+| ISO 8000 Data Quality | ISO | 2011 | | 国际标准。 |
+| TIQM | Larry English | 1999 | | 全面信息质量管理。 |
+| Measuring Data Quality | Sebastian-Coleman | 2013 | | 各维度度量。 |
+| Data Standards Management | DAMA | 2017 | | DMBOK 章节。 |
+| Entity Resolution and Info Quality | Talburt | 2011 | | 实体解析算法。 |
+| Data Quality Assessment | Pipino et al. | 2002 | | 评估方法论。 |
+| Rule-Based DQ | Informatica | 2022 | | 规则引擎实践。 |
+| Cost of Poor Data Quality | Gartner | 2018 | | 劣质数据成本分析。 |
+| Six Sigma for Data | Motorola University | 2000 | | 六西格玛数据版。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** 质量是检测出来的，不是设计出来的。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** 落标比定标技术上更难。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** 只要买了质量工具，质量自然就好。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** 业务部门必须参与标准制定。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** 手机号位数不够属于？
+    * A. 一致性
+    * B. 及时性
+    * C. 有效性 (Validity)
+    * D. 唯一性
+
+6. **[单选]** 必填项为空属于？
+    * A. 完整性
+    * B. 准确性
+    * C. 唯一性
+    * D. 及时性
+
+7. **[单选]** 解决质量问题性价比最高的环节？
+    * A. 源头 (录入端)
+    * B. ODS
+    * C. DW
+    * D. 报表端
+
+8. **[多选]** 质量改进循环 PDCA 指？
+    * A. Plan
+    * B. Do
+    * C. Check
+    * D. Act
+
+9. **[单选]** 谁最懂业务字段的含义？
+    * A. DBA
+    * B. 业务人员
+    * C. 网络管理员
+    * D. 硬件采购员
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **错**。解析：质量是设计出来的，源头控制最重要。
+2. **对**。解析：定标是写文档，落标要改系统。
+3. **错**。解析：工具只是辅助，关键是制度和人。
+4. **对**。解析：业务含义只有业务懂。
+5. **C**。解析：格式/Pattern 错误属于有效性。
+6. **A**。解析：缺失值。
+7. **A**。解析：1-10-100 法则，源头纠错成本最低。
+8. **ABCD**。解析：戴明环。
+9. **B**。解析：领域知识。

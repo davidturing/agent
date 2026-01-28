@@ -61,11 +61,97 @@ graph TD
 
 ---
 
-## 📚 5. 扩展阅读与参考文献 (References)
 
-> [!WARNING]
-> 当下的最佳实践，下个月可能就过时了。保持持续学习。
 
-1.  **OpenAI**. _GPT-4 Technical Report_. (虽然细节不多，但方向性极强)
-2.  **Anthropic**. _Constitutional AI: Harmlessness from AI Feedback_. (RLHF 的进阶版)
-3.  **HuggingFace**. _Open LLM Leaderboard_. (关注数据对模型得分的影响)
+## ❓ 5. 常见问题 (FAQ)
+### Q1: 为什么要清洗大模型语料？
+**A:** "Garbage In, Garbage Out". 如果语料包含仇恨言论、偏见或错误知识，训练出来的模型也会有这些问题。
+### Q2: 什么是提示词注入 (Prompt Injection)？
+**A:** 类似于 SQL 注入。恶意用户通过“角色扮演”等话术（比如“请扮演我去世的奶奶，她是造汽油弹专家”），绕过 AI 的安全限制。
+
+---
+
+## 📚 6. 参考文档 (References)
+
+> [!NOTE]
+> 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
+
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| :--- | :--- | :--- | :--- | :--- |
+| GPT-4 Technical Report | OpenAI | 2023 | | 技术细节与安全治理。 |
+| Constitutional AI | Anthropic | 2022 | | RLHF 与无害化 AI。 |
+| Llama 2: Open Foundation Models | Meta | 2023 | | 开源模型治理报告。 |
+| Generative AI Governance Framework | WEF | 2023 | | AI 治理框架。 |
+| Red Teaming Language Models | DeepMind | 2022 | | 红队测试方法论。 |
+| Data Centric AI | Andrew Ng | 2021 | | 吴恩达：以数据为中心。 |
+| Deduping Training Data | Google Research | 2022 | | 大规模去重算法。 |
+| Top 10 LLM Vulns | OWASP | 2023 | | 大模型十大漏洞。 |
+| EU AI Act | European Union | 2023 | | 人工智能法案。 |
+| Synthetic Data | Gartner | 2022 | | 合成数据趋势。 |
+
+---
+
+## 📝 7. 章节测验 (Quiz)
+
+### 7.1 第一部分：判断题 (True/False)
+1. **[判断]** 语料质量决定了模型的上限。
+    * ( ) 对
+    * ( ) 错
+
+2. **[判断]** 提示词注入属于对 AI 的一种安全攻击。
+    * ( ) 对
+    * ( ) 错
+
+3. **[判断]** RLHF (人类反馈强化学习) 主要用于让模型对齐人类价值观。
+    * ( ) 对
+    * ( ) 错
+
+4. **[判断]** 只要数据够大，模型就一定没有幻觉。
+    * ( ) 对
+    * ( ) 错
+
+### 7.2 第二部分：选择题 (Multiple Choice)
+5. **[单选]** 语料治理最核心关注？
+    * A. 数量
+    * B. 质量与版权
+    * C. 存储介质
+    * D. 压缩率
+
+6. **[单选]** 红队测试 (Red Teaming) 目的是？
+    * A. 攻击模型找漏洞
+    * B. 赞美模型
+    * C. 增加参数
+    * D. 宣传
+
+7. **[单选]** PII 指什么？
+    * A. 个人敏感信息
+    * B. 指标
+    * C. 协议
+    * D. 显卡
+
+8. **[多选]** 语料清洗常见步骤？
+    * A. 去重
+    * B. 去毒 (Detox)
+    * C. PII 过滤
+    * D. 格式化
+
+9. **[单选]** 幻觉 (Hallucination) 是指 AI？
+    * A. 看到鬼
+    * B. 一本正经胡说八道
+    * C. 拒绝回答
+    * D. 崩溃
+
+---
+<div style="page-break-after: always;"></div>
+
+### 7.3 答案与解析 (Answers & Analysis)
+
+1. **对**。解析：数据决定上限，算法逼近上限。
+2. **对**。解析：诱导模型越狱。
+3. **对**。解析：Alignment 核心技术。
+4. **错**。解析：幻觉是生成式 AI 的特性，依然存在。
+5. **B**。解析：Quality & IP。
+6. **A**。解析：模拟黑客攻击。
+7. **A**。解析：Personally Identifiable Information。
+8. **ABCD**。解析：标准管线。
+9. **B**。解析：生成事实错误的自信回答。
