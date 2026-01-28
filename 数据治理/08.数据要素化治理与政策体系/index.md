@@ -74,20 +74,18 @@ graph TD
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| 数据二十条 | 中共中央国务院 | 2022 | | 构建数据基础制度。 |
-| 企业数据资源相关会计处理暂行规定 | 财政部 | 2023 | | 入表新规。 |
-| GDPR | EU Parliament | 2018 | | 通用数据保护条例。 |
-| PIPL | NPC China | 2021 | | 个人信息保护法。 |
-| CCPA | California | 2018 | | 加州隐私法。 |
-| Data as Capital | MIT Review | 2021 | | 数据资本化。 |
-| Shanghai Data Exchange | SDE | 2022 | | 上海数交所。 |
-| Privacy Preserving Computing | IEEE | 2020 | | 隐私计算综述。 |
-| Factor Market Policy | NDRC | 2020 | | 要素市场文件。 |
-| Cross-border Data Flow | OECD | 2021 | | 跨境流转报告。 |
-
----
+| 数据二十条 | 中共中央国务院 | 2022 | [Gov.cn](http://www.gov.cn/zhengce/2022-12/19/content_5732692.htm) | 数据基础制度。 |
+| 企业数据资源相关会计处理暂行规定 | 财政部 | 2023 | [MOF](http://kjs.mof.gov.cn/zt/sjzy/) | 入表新规。 |
+| GDPR | EU Parliament | 2018 | [GDPR.eu](https://gdpr.eu/) | 欧盟隐私法。 |
+| PIPL | NPC China | 2021 | [Gov.cn](http://www.npc.gov.cn/npc/c30834/202108/a8c4e3672c74491a80b53a172bb753fe.shtml) | 个人信息保护法。 |
+| CCPA | California | 2018 | [OAG CA](https://oag.ca.gov/privacy/ccpa) | 加州隐私法。 |
+| Data as Capital | MIT Review | 2021 | [MIT](https://www.technologyreview.com/) | 数据资本化。 |
+| Shanghai Data Exchange | SDE | 2022 | [SDE](https://www.chinadep.com/) | 上海数交所。 |
+| Privacy Computing | IEEE | 2020 | [IEEE](https://ieeexplore.ieee.org/) | 隐私计算。 |
+| Factor Market Policy | NDRC | 2020 | [NDRC](https://www.ndrc.gov.cn/) | 要素市场。 |
+| Cross-border Data Flow | OECD | 2021 | [OECD](https://www.oecd.org/digital/) | 跨境流转。 |
 
 ## 📝 7. 章节测验 (Quiz)
 

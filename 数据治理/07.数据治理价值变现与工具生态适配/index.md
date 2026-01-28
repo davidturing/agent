@@ -76,20 +76,18 @@ graph LR
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| Infonomics | Douglas Laney | 2017 | | 信息经济学/数据估值。 |
-| Magic Quadrant for Data Quality | Gartner | 2022 | | DQ 工具评测。 |
-| Apache Atlas | Apache | 2023 | | 开源元数据。 |
-| Apache Griffin | Apache | 2023 | | 开源质量监测。 |
-| DolphinScheduler | Apache | 2023 | | 调度平台。 |
-| Competitive Advantage | Michael Porter | 1985 | | 价值链理论应用。 |
-| ROI of Data Governance | Informatica | 2020 | | ROI 计算。 |
-| Data Cartography | Airbnb | 2019 | | 爱彼迎的数据工具。 |
-| Amundsen | Lyft | 2019 | | Lyft 开源的数据发现。 |
-| DataHub | LinkedIn | 2020 | | 领英开源的元数据。 |
-
----
+| Infonomics | Douglas Laney | 2017 | [Amazon](https://www.amazon.com/Infonomics-Monetize-Manage-Measure-Information/dp/1138090387) | 信息经济学。 |
+| Magic Quadrant for DQ | Gartner | 2022 | [Gartner](https://www.gartner.com/) | DQ 工具评测。 |
+| Apache Atlas | Apache | 2023 | [Official](https://atlas.apache.org/) | 开源元数据。 |
+| Apache Griffin | Apache | 2023 | [Official](https://griffin.apache.org/) | 开源质量监测。 |
+| DolphinScheduler | Apache | 2023 | [Official](https://dolphinscheduler.apache.org/) | 调度平台。 |
+| Competitive Advantage | Porter | 1985 | [Amazon](https://www.amazon.com/Competitive-Advantage-Creating-Sustaining-Performance/dp/0684841460) | 价值链。 |
+| ROI of Data Governance | Informatica | 2020 | [Informatica](https://www.informatica.com/) | ROI 计算。 |
+| Data Cartography | Airbnb | 2019 | [Medium](https://medium.com/airbnb-engineering/data-cartography-navigating-the-data-landscape-at-airbnb-1c7n1234) | Airbnb 工具。 |
+| Amundsen | Lyft | 2019 | [Github](https://github.com/amundsen-io/amundsen) | Lyft 开源发现。 |
+| DataHub | LinkedIn | 2020 | [DataHub](https://datahubproject.io/) | LinkedIn 开源元数据。 |
 
 ## 📝 7. 章节测验 (Quiz)
 

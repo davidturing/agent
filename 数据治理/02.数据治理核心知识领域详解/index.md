@@ -86,20 +86,18 @@ graph LR
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| Master Data Management | David Loshin | 2008 | | MDM 经典。 |
-| The Data Warehouse Toolkit | Ralph Kimball | 2013 | | 维度建模圣经。 |
-| Apache Atlas | Apache | 2023 | | 开源元数据治理。 |
-| Six Primary Dimensions for DQ | DAMA UK | 2013 | | 六大质量维度定义。 |
-| Building the Data Warehouse | Inmon | 2005 | | 范式建模理论体系。 |
-| Data Lineage Benefits | Octopai | 2021 | | 血缘分析价值。 |
-| NIST Privacy Framework | NIST | 2020 | | 隐私框架。 |
-| Metadata Maturity | Dataversity | 2018 | | 元数据成熟度。 |
-| Informatica MDM | Informatica | 2023 | | 商业 MDM 解决方案。 |
-| Data Fabric Architecture | Gartner | 2022 | | 数据编织架构报告。 |
-
----
+| Master Data Management | David Loshin | 2008 | [Amazon](https://www.amazon.com/Master-Data-Management-David-Loshin/dp/0123742250) | MDM 经典。 |
+| The Data Warehouse Toolkit | Ralph Kimball | 2013 | [Wiley](https://www.wiley.com/en-us/The+Data+Warehouse+Toolkit) | 维度建模圣经。 |
+| Apache Atlas | Apache | 2023 | [Official](https://atlas.apache.org/) | 开源元数据治理。 |
+| Six Primary Dimensions for DQ | DAMA UK | 2013 | [DAMA UK](https://damauk.org/) | 六大质量维度定义。 |
+| Building the Data Warehouse | Inmon | 2005 | [Amazon](https://www.amazon.com/Building-Data-Warehouse-W-Inmon/dp/0764599445) | 范式建模。 |
+| Data Lineage Benefits | Octopai | 2021 | [Blog](https://octopai.com/blog/data-lineage/) | 血缘分析价值。 |
+| NIST Privacy Framework | NIST | 2020 | [NIST](https://www.nist.gov/privacy-framework) | 隐私框架。 |
+| Metadata Maturity | Dataversity | 2018 | [Article](https://www.dataversity.net/) | 元数据成熟度。 |
+| Informatica MDM | Informatica | 2023 | [Product](https://www.informatica.com/products/master-data-management.html) | 商业 MDM。 |
+| Data Fabric Architecture | Gartner | 2022 | [Gartner](https://www.gartner.com/) | 数据编织报告。 |
 
 ## 📝 7. 章节测验 (Quiz)
 

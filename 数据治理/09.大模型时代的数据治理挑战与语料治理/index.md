@@ -76,20 +76,18 @@ graph TD
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| GPT-4 Technical Report | OpenAI | 2023 | | 技术细节与安全治理。 |
-| Constitutional AI | Anthropic | 2022 | | RLHF 与无害化 AI。 |
-| Llama 2: Open Foundation Models | Meta | 2023 | | 开源模型治理报告。 |
-| Generative AI Governance Framework | WEF | 2023 | | AI 治理框架。 |
-| Red Teaming Language Models | DeepMind | 2022 | | 红队测试方法论。 |
-| Data Centric AI | Andrew Ng | 2021 | | 吴恩达：以数据为中心。 |
-| Deduping Training Data | Google Research | 2022 | | 大规模去重算法。 |
-| Top 10 LLM Vulns | OWASP | 2023 | | 大模型十大漏洞。 |
-| EU AI Act | European Union | 2023 | | 人工智能法案。 |
-| Synthetic Data | Gartner | 2022 | | 合成数据趋势。 |
-
----
+| GPT-4 Technical Report | OpenAI | 2023 | [arXiv](https://arxiv.org/abs/2303.08774) | 技术细节。 |
+| Constitutional AI | Anthropic | 2022 | [arXiv](https://arxiv.org/abs/2212.08073) | 无害化 AI。 |
+| Llama 2 Report | Meta | 2023 | [Meta](https://ai.meta.com/llama/) | 开源模型治理。 |
+| Generative AI Governance | WEF | 2023 | [WEF](https://www.weforum.org/) | AI 治理框架。 |
+| Red Teaming LLMs | DeepMind | 2022 | [DeepMind](https://www.deepmind.com/) | 红队测试。 |
+| Data Centric AI | Andrew Ng | 2021 | [Youtube](https://www.youtube.com/watch?v=06-AZXmwHjo) | 以数据为中心。 |
+| Deduping Training Data | Google | 2022 | [arXiv](https://arxiv.org/abs/2107.06499) | 去重算法。 |
+| LLM Vulnerabilities | OWASP | 2023 | [OWASP](https://owasp.org/www-project-top-10-for-large-language-model-applications/) | 十大漏洞。 |
+| EU AI Act | EU | 2023 | [EU](https://artificialintelligenceact.eu/) | AI 法案。 |
+| Synthetic Data | Gartner | 2022 | [Gartner](https://www.gartner.com/) | 合成数据。 |
 
 ## 📝 7. 章节测验 (Quiz)
 

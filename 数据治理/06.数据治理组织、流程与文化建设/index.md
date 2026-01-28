@@ -79,20 +79,18 @@ graph TD
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| Leading Change | John Kotter | 1996 | | 变革管理经典。 |
-| Data Stewardship | David Plotkin | 2013 | | 管家职责。 |
-| Culture Eats Strategy for Breakfast | Peter Drucker | N/A | | 名言：文化至上。 |
-| Organizing for Data Governance | Boris Otto | 2011 | | 治理组织形态。 |
-| Chief Data Officer Agenda | Gartner | 2020 | | CDO 职责。 |
-| Data Literacy | Qlik | 2021 | | 数据素养。 |
-| Non-Invasive Data Governance | Seiner | 2014 | | 角色定义。 |
-| RACI Matrix | PMI | 2017 | | 职责矩阵工具。 |
-| Constructing a Data Culture | McKinsey | 2018 | | 建设数据文化。 |
-| Governing the Commons | Elinor Ostrom | 1990 | | 公共事务治理（诺奖）。 |
-
----
+| Leading Change | John Kotter | 1996 | [Amazon](https://www.amazon.com/Leading-Change-New-Preface-Author/dp/1422186431) | 变革管理。 |
+| Data Stewardship | David Plotkin | 2013 | [Amazon](https://www.amazon.com/Data-Stewardship-Actionable-Effective-Management/dp/0124103892) | 管家职责。 |
+| Culture Eats Strategy | Drucker | N/A | [Institute](https://www.drucker.institute/) | 文化至上。 |
+| Organizing for Data Governance | Boris Otto | 2011 | [AIS](https://aisel.aisnet.org/cais/vol29/iss1/3/) | 治理组织。 |
+| Chief Data Officer Agenda | Gartner | 2020 | [Gartner](https://www.gartner.com/) | CDO 职责。 |
+| Data Literacy | Qlik | 2021 | [Qlik](https://www.qlik.com/us/data-literacy) | 数据素养。 |
+| Non-Invasive Data Governance | Seiner | 2014 | [Technics](https://technicspub.com/nidg/) | 非入侵式。 |
+| RACI Matrix | PMI | 2017 | [PMI](https://www.pmi.org/) | 职责矩阵。 |
+| Constructing a Data Culture | McKinsey | 2018 | [McKinsey](https://www.mckinsey.com/) | 数据文化。 |
+| Governing the Commons | Elinor Ostrom | 1990 | [Amazon](https://www.amazon.com/Governing-Commons-Evolution-Institutions-Action/dp/0521405998) | 公共治理。 |
 
 ## 📝 7. 章节测验 (Quiz)
 

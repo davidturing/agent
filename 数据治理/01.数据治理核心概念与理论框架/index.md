@@ -96,20 +96,18 @@ graph TD
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| DAMA-DMBOK2 | DAMA International | 2017 | | 行业圣经，核心参考架构。 |
-| Non-Invasive Data Governance | Robert Seiner | 2014 | | 非入侵式治理，强调利用已有流程。 |
-| Designing Data Governance | Khatri & Brown | 2010 | | 学术界定义的 5 大治理决策域。 |
-| The DGI Framework | DGI | 2004 | | 早期的经典治理框架。 |
-| 华为数据之道 | 华为数据管理部 | 2020 | | 国内企业数字化转型必读实战案例。 |
-| ISO/IEC 38500 | ISO | 2015 | | IT 治理国际标准。 |
-| Gartner Data Governance Survey | Gartner | 2023 | | 年度行业治理现状统计。 |
-| What's Your Data Strategy? | HBR | 2017 | | 哈佛商业评论关于数据战略的论述。 |
-| Data Governance Maturity Model | IBM | 2007 | | 成熟度评估模型。 |
-| Data Stewardship | David Plotkin | 2013 | | 数据管家实操指南。 |
-
----
+| DAMA-DMBOK2 | DAMA International | 2017 | [Amazon](https://www.amazon.com/DAMA-DMBOK-Data-Management-Body-Knowledge/dp/1634622340) | 行业圣经，核心参考架构。 |
+| Non-Invasive Data Governance | Robert Seiner | 2014 | [Technics Pub](https://technicspub.com/nidg/) | 非入侵式治理。 |
+| Designing Data Governance | Khatri & Brown | 2010 | [ACM DL](https://dl.acm.org/doi/10.1145/1629175.1629210) | 学术界定义的 5 大治理决策域。 |
+| The DGI Framework | DGI | 2004 | [DGI](http://www.datagovernance.com/the-dgi-framework/) | 经典治理框架。 |
+| 华为数据之道 | 华为数据管理部 | 2020 | [JD.com](https://item.jd.com/12965389.html) | 国内企业实战案例。 |
+| ISO/IEC 38500 | ISO | 2015 | [ISO](https://www.iso.org/standard/62816.html) | IT 治理国际标准。 |
+| Gartner Data Governance Survey | Gartner | 2023 | [Gartner](https://www.gartner.com/en/information-technology/role/cio-it-executives) | 年度行业现状。 |
+| What's Your Data Strategy? | HBR | 2017 | [HBR](https://hbr.org/2017/05/whats-your-data-strategy) | 数据战略论述。 |
+| Data Governance Maturity Model | IBM | 2007 | [IBM](https://www.ibm.com/downloads/cas/WJRQB6Z1) | 成熟度模型。 |
+| Data Stewardship | David Plotkin | 2013 | [Amazon](https://www.amazon.com/Data-Stewardship-Actionable-Effective-Management/dp/0124103892) | 数据管家指南。 |
 
 ## 📝 7. 章节测验 (Quiz)
 

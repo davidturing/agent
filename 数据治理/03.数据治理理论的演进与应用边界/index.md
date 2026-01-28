@@ -85,20 +85,18 @@ graph TD
 > [!NOTE]
 > 本列表收录了该领域的核心文献。您可以点击链接购买书籍或查看原文。
 
-| 标题 (Title) | 作者 (Author) | 日期 (Date) | | 简介 (Summary) |
+| 标题 (Title) | 作者 (Author) | 日期 (Date) | 链接 (Link) | 简介 (Summary) |
 | :--- | :--- | :--- | :--- | :--- |
-| Data Mesh | Zhamak Dehghani | 2022 | | 分布式治理奠基作。 |
-| COBIT 2019 | ISACA | 2019 | | IT 治理框架。 |
-| Data Mesh Principles | ThoughtWorks | 2021 | | 四大原则解读。 |
-| One Size Does Not Fit All | Weber et al. | 2009 | | 权变治理理论。 |
-| Data Driven | Tom Redman | 2008 | | 数据驱动业务。 |
-| The Evolution of Data Governance | TDWI | 2020 | | 治理由虚向实。 |
-| Federated Data Governance | Databricks | 2022 | | 联邦治理实践。 |
-| Agile Data Governance | Forrester | 2019 | | 敏捷治理报告。 |
-| IT Governance Standard | ISO 38500 | 2015 | | 国际标准。 |
-| The Modern Data Stack | dbt Labs | 2023 | | 现代技术栈。 |
-
----
+| Data Mesh | Zhamak Dehghani | 2022 | [O'Reilly](https://www.oreilly.com/library/view/data-mesh/9781492092384/) | 分布式治理奠基作。 |
+| COBIT 2019 | ISACA | 2019 | [ISACA](https://www.isaca.org/resources/cobit) | IT 治理框架。 |
+| Data Mesh Principles | ThoughtWorks | 2021 | [ThoughtWorks](https://martinfowler.com/articles/data-mesh-principles.html) | 四大原则解读。 |
+| One Size Does Not Fit All | Weber et al. | 2009 | [MIST](https://misq.org/) | 权变治理理论。 |
+| Data Driven | Tom Redman | 2008 | [Amazon](https://www.amazon.com/Data-Driven-Business-Faster-Better/dp/1422119122) | 数据驱动业务。 |
+| The Evolution of Data Governance | TDWI | 2020 | [TDWI](https://tdwi.org/) | 治理演进。 |
+| Federated Data Governance | Databricks | 2022 | [Databricks](https://www.databricks.com/blog/2022/06/27/federated-data-governance.html) | 联邦治理实践。 |
+| Agile Data Governance | Forrester | 2019 | [Forrester](https://www.forrester.com/) | 敏捷治理报告。 |
+| IT Governance Standard | ISO 38500 | 2015 | [ISO](https://www.iso.org/) | 国际标准。 |
+| The Modern Data Stack | dbt Labs | 2023 | [dbt](https://www.getdbt.com/) | 现代技术栈。 |
 
 ## 📝 7. 章节测验 (Quiz)
 
