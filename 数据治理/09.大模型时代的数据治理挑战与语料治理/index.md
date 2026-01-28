@@ -1,6 +1,6 @@
-# 09. 大模型时代的数据治理挑战与语料治理 (LLM & Corpus)
+# 📘 09. 大模型时代的数据治理挑战与语料治理 (LLM & Corpus)
 
-## 1. 业界背景与范式革命
+## 🏙️ 1. 业界背景与范式革命
 
 ChatGPT 的横空出世，将数据治理带入了一个从未涉足的深水区。
 
@@ -11,7 +11,7 @@ ChatGPT 的横空出世，将数据治理带入了一个从未涉足的深水区
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章是全书**最前沿**的部分，探讨 AI Native 时代的治理新命题。
 
@@ -22,7 +22,7 @@ ChatGPT 的横空出世，将数据治理带入了一个从未涉足的深水区
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph TD
@@ -50,7 +50,7 @@ graph TD
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [9.1-ai大模型对传统数据治理的冲击与重构](./9.1-ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AF%B9%E4%BC%A0%E7%BB%9F%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%9A%84%E5%86%B2%E5%87%BB%E4%B8%8E%E9%87%8D%E6%9E%84.md)
     *   _Note: 传统元数据管理（只管表结构）在 AI 时代基本失效，需要新的“语料特征平台”。_
@@ -61,7 +61,7 @@ graph TD
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!WARNING]
 > 当下的最佳实践，下个月可能就过时了。保持持续学习。

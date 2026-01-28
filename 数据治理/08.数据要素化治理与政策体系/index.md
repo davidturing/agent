@@ -1,6 +1,6 @@
-# 08. 数据要素化治理与政策体系 (Data Elements & Policy)
+# 📘 08. 数据要素化治理与政策体系 (Data Elements & Policy)
 
-## 1. 业界背景与政策红利
+## 🏙️ 1. 业界背景与政策红利
 
 2020 年，中国中央文件正式将数据列为继土地、劳动力、资本、技术之后的**第五大生产要素**。这标志着数据治理进入了“资本化”的新纪元。
 
@@ -10,7 +10,7 @@
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章探讨数据如何从“资源”变成“资产”，再变成“资本”。
 
@@ -21,7 +21,7 @@
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph TD
@@ -48,7 +48,7 @@ graph TD
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [8.1-数据要素化的核心逻辑与治理内涵](./8.1-%E6%95%B0%E6%8D%AE%E8%A6%81%E7%B4%A0%E5%8C%96%E7%9A%84%E6%A0%B8%E5%BF%83%E9%80%BB%E8%BE%91%E4%B8%8E%E6%B2%BB%E7%90%86%E5%86%85%E6%B6%B5.md)
     *   _Note: 为什么说“入表”是 CIO 和 CFO 对话的共同语言？_
@@ -59,7 +59,7 @@ graph TD
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!NOTE]
 > 数据要素是典型的“中国特色”理论创新，在这方面中国走在世界前列。

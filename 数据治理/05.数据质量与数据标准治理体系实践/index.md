@@ -1,6 +1,6 @@
-# 05. 数据质量与数据标准治理体系实践 (Quality & Standards)
+# 📘 05. 数据质量与数据标准治理体系实践 (Quality & Standards)
 
-## 1. 业界背景与实战挑战
+## 🏙️ 1. 业界背景与实战挑战
 
 数据质量 (Data Quality, DQ) 是数据治理这棵大树的“果实”。如果治理了半天，报表还是错的，模型还是偏的，那么所有的投入都是浪费。
 
@@ -12,7 +12,7 @@
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章聚焦于“怎么管好数据质量”和“怎么定好数据标准”这两个孪生话题。
 
@@ -23,7 +23,7 @@
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph TD
@@ -58,7 +58,7 @@ DAMA 定义了数据质量的六个核心维度，我们必须熟记于心：
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [5.1-数据质量管理全流程管控](./5.1-%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E5%85%A8%E6%B5%81%E7%A8%8B%E7%AE%A1%E6%8E%A7.md)
     *   _Note: 详解华为“数据质量五维体系”与大规模 ETL 场景下的熔断机制。_
@@ -67,7 +67,7 @@ DAMA 定义了数据质量的六个核心维度，我们必须熟记于心：
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!NOTE]
 > 质量不是测出来的，是设计出来的 (Quality is designed in, not tested in)。

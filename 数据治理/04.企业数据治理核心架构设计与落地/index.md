@@ -1,6 +1,6 @@
-# 04. 企业数据治理核心架构设计与落地 (Architecture & Implementation)
+# 📘 04. 企业数据治理核心架构设计与落地 (Architecture & Implementation)
 
-## 1. 业界背景与架构范式
+## 🏙️ 1. 业界背景与架构范式
 
 企业数据架构（Enterprise Data Architecture）是连接业务战略与技术实现的桥梁。如果没有稳固的架构，任何治理动作都是“修修补补”。
 
@@ -16,7 +16,7 @@
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章旨在讲透“怎么搭架子”。架构设计不是画几张 PPT，而是要解决实际的数据流转效率和复用性问题。
 
@@ -27,7 +27,7 @@
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph TD
@@ -56,7 +56,7 @@ graph TD
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [4.1-数据架构设计的核心逻辑与实践范式](./4.1-%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%A0%B8%E5%BF%83%E9%80%BB%E8%BE%91%E4%B8%8E%E5%AE%9E%E8%B7%B5%E8%8C%83%E5%BC%8F.md)
     *   _Note: 架构即政治。数据架构的本质是组织内部信息权力的重构。_
@@ -67,7 +67,7 @@ graph TD
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!NOTE]
 > 只有适合自己企业的架构，才是最好的架构。切忌盲目照搬大厂。

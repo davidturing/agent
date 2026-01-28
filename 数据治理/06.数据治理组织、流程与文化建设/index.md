@@ -1,6 +1,6 @@
-# 06. 数据治理组织、流程与文化建设 (Organization & Culture)
+# 📘 06. 数据治理组织、流程与文化建设 (Organization & Culture)
 
-## 1. 业界背景与组织困境
+## 🏙️ 1. 业界背景与组织困境
 
 数据治理是“一把手工程”，这句口号喊了很多年，但落地的只有少数。原因在于治理触动了部门的核心利益（数据的所有权）。
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章探讨“人”的问题。没有组织保障，再好的技术平台也是摆设。
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph TD
@@ -50,7 +50,7 @@ graph TD
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [6.1-数据治理组织架构与责任体系搭建](./6.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84%E4%B8%8E%E8%B4%A3%E4%BB%BB%E4%BD%93%E7%B3%BB%E6%90%AD%E5%BB%BA.md)
     *   _Note: 详解华为“铁三角”协同机制。_
@@ -61,7 +61,7 @@ graph TD
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!WARNING]
 > 组织架构没有标准答案，必须适配企业的权力结构。

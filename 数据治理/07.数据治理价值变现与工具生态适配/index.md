@@ -1,6 +1,6 @@
-# 07. 数据治理价值变现与工具生态适配 (Value & Tools)
+# 📘 07. 数据治理价值变现与工具生态适配 (Value & Tools)
 
-## 1. 业界背景与工具战争
+## 🏙️ 1. 业界背景与工具战争
 
 数据治理的终极拷问是：“你给公司赚了多少钱？”如果不能回答这个问题，治理团队迟早会被裁撤。与价值变现相伴而生的是治理工具的“军备竞赛”。
 
@@ -11,7 +11,7 @@
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章旨在解决两个最务实的问题：1. 怎么算账（ROI）？ 2. 怎么选型？
 
@@ -22,7 +22,7 @@
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph LR
@@ -49,7 +49,7 @@ graph LR
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [7.1-数据价值变现的核心路径](./7.1-%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E5%8F%98%E7%8E%B0%E7%9A%84%E6%A0%B8%E5%BF%83%E8%B7%AF%E5%BE%84.md)
     *   _Note: 千万别只盯着技术指标（DQ Score），要盯着业务指标（GMV, CTR）。_
@@ -58,7 +58,7 @@ graph LR
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!TIP]
 > 选工具就像选鞋子，合脚比名牌更重要。

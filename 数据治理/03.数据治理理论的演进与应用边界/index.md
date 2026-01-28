@@ -1,6 +1,6 @@
-# 03. 数据治理理论的演进与应用边界 (Evolution & Boundaries)
+# 📘 03. 数据治理理论的演进与应用边界 (Evolution & Boundaries)
 
-## 1. 业界背景与理论迭代
+## 🏙️ 1. 业界背景与理论迭代
 
 数据治理理论并非静止的，它随着 IT 架构的演进而不断进化。理解这段历史，有助于我们看清未来的方向，避免刻舟求剑。
 
@@ -20,7 +20,7 @@
 
 ---
 
-## 2. 本章课题描述 (Chapter Objectives)
+## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章旨在打破对 DAMA 等经典理论的迷信，用辩证的眼光审视现有框架的适用性与局限性。
 
@@ -31,7 +31,7 @@
 
 ---
 
-## 3. 整体知识框架 (Overall Framework)
+## 🏗️ 3. 整体知识框架 (Overall Framework)
 
 ```mermaid
 graph TD
@@ -59,7 +59,7 @@ graph TD
 
 ---
 
-## 4. 目录导航 (Section Navigation)
+## 🧭 4. 目录导航 (Section Navigation)
 
 *   [3.1-数据治理理论的发展脉络](./3.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%90%86%E8%AE%BA%E7%9A%84%E5%8F%91%E5%B1%95%E8%84%89%E7%BB%9C.md)
     *   _Note: 回顾历史是为了更好地面对未来。了解为什么会有“治理”这个概念。_
@@ -70,7 +70,7 @@ graph TD
 
 ---
 
-## 5. 扩展阅读与参考文献 (References)
+## 📚 5. 扩展阅读与参考文献 (References)
 
 > [!NOTE]
 > 任何理论模型都是对现实的简化（Reduction），必然存在失真。
