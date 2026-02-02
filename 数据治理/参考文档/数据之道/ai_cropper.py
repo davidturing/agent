@@ -21,7 +21,16 @@ def detect_and_crop(image_path, target_path, figure_name):
     with open(image_path, 'rb') as f:
         image_data = f.read()
 
-    prompt = f"Find the bounding box of the diagram titled '{figure_name}' in this image. Return ONLY the coordinates as [ymin, xmin, ymax, xmax] in 0-1000 scale. No other text."
+    prompt = f"""
+    Find the bounding box of the entire figure labeled '{figure_name}'. 
+    The bounding box must include:
+    1. The visual diagram/graphic itself.
+    2. All associated labels, text boxes, and legends belonging to this figure.
+    3. The figure caption text (e.g., '{figure_name} xxx').
+    
+    Ensure the box is wide and tall enough to encompass every element without clipping.
+    Return ONLY the coordinates as [ymin, xmin, ymax, xmax] in 0-1000 scale.
+    """
 
     response = client.models.generate_content(
         model="gemini-2.5-flash", 
@@ -57,8 +66,8 @@ def detect_and_crop(image_path, target_path, figure_name):
     right = xmax * w / 1000
     bottom = ymax * h / 1000
     
-    # Add a small margin if possible
-    margin = 5
+    # Add a generous margin
+    margin = 30
     left = max(0, left - margin)
     top = max(0, top - margin)
     right = min(w, right + margin)
