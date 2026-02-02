@@ -1,10 +1,3 @@
-<style>
-body { font-family: "Microsoft YaHei", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "SimSun", serif; }
-strong { font-weight: 700; color: #000; }
-em { font-style: italic; color: #555; }
-</style>
-
 # 华为数据之道：第三章 - 差异化的企业数据分类管理框架
 
 不同的企业或组织基于不同的目的，可以从多个角度对数据进行分类，如结构化数据和非结构化数据、内部数据和外部数据、原始数据和衍生数据、明细数据和汇总数据等。华为在业界的数据分类基础上，结合自身多年的实践，已形成完整的**数据分类管理框架**。华为对数据进行分类的目的，是为了针对不同特性的数据采取不同的管理策略，以期实现最大的投入产出比。

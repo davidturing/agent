@@ -1,10 +1,3 @@
-<style>
-body { font-family: "Microsoft YaHei", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "SimSun", serif; }
-strong { font-weight: 700; color: #000; }
-em { font-style: italic; color: #555; }
-</style>
-
 # 第四章：面向“业务交易”的信息架构建设
 
 华为过去的**信息架构 (Information Architecture, IA)** 建设主要是为了实现“信息化”或“业务上ERP”，其架构往往隐藏在系统和IT功能之下。随着企业数字化的推进，华为公司越来越认识到信息架构的价值并不仅限于“支撑IT建设落地”，而是更好地管理企业数据资产，提升整个业务交易链条的效率，甚至基于信息架构重新审视业务边界的划分和整合。

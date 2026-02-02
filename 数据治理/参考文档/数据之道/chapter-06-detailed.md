@@ -1,10 +1,3 @@
-<style>
-body { font-family: "Microsoft YaHei", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "SimSun", serif; }
-strong { font-weight: 700; color: #000; }
-em { font-style: italic; color: #555; }
-</style>
-
 # 第六章：面向“自助消费”的数据服务建设
 
 本章深入探讨了**数据底座**建设的目标，即更好地支撑**数据消费**。在完成数据的汇聚、整合、联接之后，需要在供给侧确保用户更便捷、更安全地获取数据。华为公司通过构建基于**数据服务**的“**自助消费**”实践，打造了从数据供应到消费的完整链路，旨在解决传统数据获取方式的痛点，平衡数据获取效率与数据安全。

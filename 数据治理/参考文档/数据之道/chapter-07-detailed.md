@@ -1,10 +1,3 @@
-<style>
-body { font-family: "Microsoft YaHei", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "SimSun", serif; }
-strong { font-weight: 700; color: #000; }
-em { font-style: italic; color: #555; }
-</style>
-
 # 7. 打造“数字孪生”的数据全量感知能力
 
 在信息化时代构建的IT系统，基本上是功能化、烟囱化、封闭式的，只能给企业内部经过培训的专业人员使用，所有的决策数据和我们信任的IT系统基本都是靠人来录入数据。_但是，人如果犯错呢？_

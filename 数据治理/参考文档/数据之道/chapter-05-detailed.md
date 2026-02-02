@@ -1,10 +1,3 @@
-<style>
-body { font-family: "Microsoft YaHei", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "SimSun", serif; }
-strong { font-weight: 700; color: #000; }
-em { font-style: italic; color: #555; }
-</style>
-
 # 5. 面向“联接共享”的数据底座建设
 
 _在从信息化向数字化转型的过程中，企业积累了海量数据，但这些数据普遍存在分散、不拉通的问题，缺乏统一的定义和架构，导致真正能产生价值的数据很少，找到想要、能用的数据越来越难。_ 本章将详述华为通过构建**数据底座**，实现数据的汇聚和联接，打破数据孤岛和垄断，重建数据获取方式和次序，从而在数字化转型中起着关键作用。

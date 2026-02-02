@@ -1,10 +1,3 @@
-<style>
-body { font-family: "Microsoft YaHei", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "SimSun", serif; }
-strong { font-weight: 700; color: #000; }
-em { font-style: italic; color: #555; }
-</style>
-
 # 8. 打造“清洁数据”的质量综合管理能力
 
 _越来越多的企业应用和服务都基于数据而建，数据质量是数据价值得以发挥的前提。例如企业运营效率主要依赖于数据获取的准确性和及时性，企业客户关系管理系统中的错误或不完整数据将导致客户沟通不顺畅，影响客户满意度。_
