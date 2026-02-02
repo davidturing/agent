@@ -81,7 +81,7 @@ def main():
     high_res_dir = Path("/Users/david/david_project/datapipeline/high_res")
     
     tasks = [
-        (Path("/Users/david/david_project/datapipeline/thumbnails/page_28.png"), images_dir / "图1-3.png", "图 1-3"),
+        (high_res_dir / "page_28.png", images_dir / "图1-3.png", "图 1-3"),
         (high_res_dir / "page_34.png", images_dir / "图1-6.png", "图 1-6"),
         (high_res_dir / "page_35.png", images_dir / "图1-7.png", "图 1-7"),
     ]
