@@ -4,9 +4,7 @@
 
 ### 架构图解析：
 
-![
-![图 2-1](images/![图2-1](images/图2-1.png).png)
-](images/![图2-1](images/图2-1.png).png)
+![图 2-1](images/图2-1.png)
 
  华为数据治理体系框架
 
@@ -176,59 +174,21 @@
 
 
 
-![图 2-4](images/
+![图 2-4](images/图2-4.png)
+![图2-4](images/图2-4.png)
 
 ![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
-.png)
-](images/
 
 ![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
-.png)
-](images/
 
 ![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
-.png)
-](images/
+](images/![图 2-4](images/图2-4.png)
 
 ![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
-.png)
-](images/![
-
-![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
-](images/
-
-![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
 .png).png)
-](images/![
+](images/![图 2-4](images/图2-4.png)
 
 ![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
-](images/
-
-![图2-4](images/图2-4.png)
-](images/
-![图2-4](images/图2-4.png)
-.png)
 .png).png)
  华为数据治理决策体系**
     *   这是一个分层的决策模型，确保数据治理的决策能够高效、专业地进行。
@@ -292,18 +252,10 @@
 
 ![图 2-5](images/图2-5.png)
 
-](images/
 ![图2-5](images/图2-5.png)
-.png)
-](images/![
-![图2-5](images/图2-5.png)
-](images/
-![图2-5](images/图2-5.png)
+](images/![图 2-5](images/图2-5.png)
 .png).png)
-](images/![
-![图2-5](images/图2-5.png)
-](images/
-![图2-5](images/图2-5.png)
+](images/![图 2-5](images/图2-5.png)
 .png).png)
  华为数据管理组织**
     *   **核心管理层**：
@@ -331,15 +283,9 @@
 
 
 
-](images/![
-![图2-6](images/图2-6.png)
-](images/
-![图2-6](images/图2-6.png)
+](images/![图 2-6](images/图2-6.png)
 .png).png)
-](images/![
-![图2-6](images/图2-6.png)
-](images/
-![图2-6](images/图2-6.png)
+](images/![图 2-6](images/图2-6.png)
 .png).png)
  华为数据全生命周期治理规范与方案
 
