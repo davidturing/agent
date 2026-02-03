@@ -170,24 +170,6 @@
 
 *   **决策体系解析：
 
-
-
-
-
-![图 2-4](images/图2-4.png)
-![图2-4](images/图2-4.png)
-
-![图2-4](images/图2-4.png)
-
-![图2-4](images/图2-4.png)
-
-![图2-4](images/图2-4.png)
-](images/![图 2-4](images/图2-4.png)
-
-![图2-4](images/图2-4.png)
-.png).png)
-](images/![图 2-4](images/图2-4.png)
-
 ![图2-4](images/图2-4.png)
 .png).png)
  华为数据治理决策体系**
@@ -280,13 +262,6 @@
 
 
 ![图 2-6](images/图2-6.png)
-
-
-
-](images/![图 2-6](images/图2-6.png)
-.png).png)
-](images/![图 2-6](images/图2-6.png)
-.png).png)
  华为数据全生命周期治理规范与方案
 
 该图展示了华为为数据全生命周期治理建立的规范体系，覆盖了从业务感知到IT开发再到数据消费的全过程。
