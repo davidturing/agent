@@ -10,17 +10,23 @@
 *   **3.0 时代 (2015 - 2023)**: 移动互联网和数字化转型爆发。数据成为生产要素。**数据治理 (Data Governance)** 正式走向舞台中央，涵盖了安全、合规、标准、质量全生命周期。企业设立 CDO (首席数据官) 职位。
 *   **4.0 时代 (2023 - 未来)**: AI 大模型驱动。治理的边界拓展到**非结构化数据**和**语料治理**。
 
+![数据演进历程时间轴 (Data Evolution Timeline)](./illustrations/data-governance-intro/01-timeline-data-evolution.png)
+
 ### 1.2 当前痛点
 尽管概念火热，但据 Gartner 统计，超过 60% 的数据治理项目未能达到预期目标。核心痛点包括：
 *   **重技术轻管理**: 买了一堆昂贵的治理平台，但没有建立配套的认责制度。
 *   **与业务脱节**: 治理变成了 IT 部门的自嗨，业务部门觉得“增加了录入负担”而消极抵抗。
 *   **ROI 难以量化**: 老板问“花 500 万做治理，在这个季度能带来多少利润？”，很难回答。
 
+![数据治理核心痛点 (Data Governance Pain Points)](./illustrations/data-governance-intro/02-infographic-governance-painpoints.png)
+
 ---
 
 ## 🎯 2. 本章课题描述 (Chapter Objectives)
 
 本章作为全课程的基石，旨在为读者构建一个坚实、清晰的理论认知框架。我们将剥离市面上令人眼花缭乱的概念包装，直击数据治理的本质。
+
+![数据治理 vs 数据管理 (Governance vs Management)](./illustrations/data-governance-intro/03-comparison-governance-vs-management.png)
 
 **核心课题**:
 1.  **定义厘清**: 什么是治理？什么是管理？两者有何区别？(Governance vs Management)
@@ -50,13 +56,15 @@ graph TD
     D --> D2[实施路径]
 ```
 
+![DAMA-DMBOK2 知识体系架构 (Framework)](./illustrations/data-governance-intro/04-framework-dama-logic.png)
+
 ### 🧩 3.1 核心板块详解
 
 | 章节 | 核心内容 | 关键知识点 |
 | :--- | :--- | :--- |
-| [**1.1 定义与边界**](./1.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%9A%84%E5%AE%9A%E4%B9%89%E3%80%81%E8%BE%B9%E7%95%8C%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC.md) | 厘清概念，划定范围 | **决策权 (Decision Rights)**、**责权对等**、**资产负债表论** |
-| [**1.2 DAMA 体系**](./1.2-dama-dmbok2-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%A1%86%E6%9E%B6.md) | 全球标准解读 | **DAMA Wheel**、**11 个知识领域**、**环境因素** |
-| [**1.3 方法论**](./1.3-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99%E4%B8%8E%E6%96%B9%E6%B3%95%E8%AE%BA.md) | 落地实施指南 | **业务导向**、**急用先行**、**PDCA 循环** |
+| [**1.1 定义与边界**](1.1-data_governance_definition.md) | 厘清概念，划定范围 | **决策权 (Decision Rights)**、**责权对等**、**资产负债表论** |
+| [**1.2 DAMA 体系**](1.2-dama_dmbok2_framework.md) | 全球标准解读 | **DAMA Wheel**、**11 个知识领域**、**环境因素** |
+| [**1.3 方法论**](1.3-data_governance_principles_methodology.md) | 落地实施指南 | **业务导向**、**急用先行**、**PDCA 循环** |
 
 ---
 
@@ -64,11 +72,11 @@ graph TD
 
 以下是本章包含的详细内容模块：
 
-*   [1.1-数据治理的定义、边界与核心价值](./1.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%9A%84%E5%AE%9A%E4%B9%89%E3%80%81%E8%BE%B9%E7%95%8C%E4%B8%8E%E6%A0%B8%E5%BF%83%E4%BB%B7%E5%80%BC.md)
+*   [1.1-数据治理的定义、边界与核心价值](1.1-data_governance_definition.md)
     *   _Note: 重点理解“治理是关于决策权的分配，管理是关于决策的执行”。_
-*   [1.2-dama-dmbok2-数据管理知识体系框架](./1.2-dama-dmbok2-%E6%95%B0%E6%8D%AE%E7%AE%A1%E7%90%86%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB%E6%A1%86%E6%9E%B6.md)
+*   [1.2-dama-dmbok2-数据管理知识体系框架](1.2-dama_dmbok2_framework.md)
     *   _Note: 本节包含高清 DAMA 车轮图解析，是数据治理从业者的必修课。_
-*   [1.3-数据治理的基本原则与方法论](./1.3-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99%E4%B8%8E%E6%96%B9%E6%B3%95%E8%AE%BA.md)
+*   [1.3-数据治理的基本原则与方法论](1.3-data_governance_principles_methodology.md)
     *   _Note: 探讨如何避免“大而全”的治理陷阱，主张“敏捷治理”。_
 
 ---
