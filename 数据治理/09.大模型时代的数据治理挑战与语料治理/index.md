@@ -52,11 +52,11 @@ graph TD
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [9.1-ai大模型对传统数据治理的冲击与重构](./9.1-ai%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AF%B9%E4%BC%A0%E7%BB%9F%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%9A%84%E5%86%B2%E5%87%BB%E4%B8%8E%E9%87%8D%E6%9E%84.md)
+*   [9.1-ai大模型对传统数据治理的冲击与重构](9.1-ai_llm_data_governance_impact.md)
     *   _Note: 传统元数据管理（只管表结构）在 AI 时代基本失效，需要新的“语料特征平台”。_
-*   [9.2-大模型语料治理核心：高质量数据构建](./9.2-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%AF%AD%E6%96%99%E6%B2%BB%E7%90%86%E6%A0%B8%E5%BF%83%EF%BC%9A%E9%AB%98%E8%B4%A8%E9%87%8F%E6%95%B0%E6%8D%AE%E6%9E%84%E5%BB%BA.md)
+*   [9.2-大模型语料治理核心：高质量数据构建](9.2-llm_corpus_data_quality.md)
     *   _Note: Garbage In, Garbage Out 在 AI 时代是绝对真理。深度解析去重算法。_
-*   [9.3-大模型数据安全与伦理治理](./9.3-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E4%B8%8E%E4%BC%A6%E7%90%86%E6%B2%BB%E7%90%86.md)
+*   [9.3-大模型数据安全与伦理治理](9.3-llm_data_security_ethics.md)
     *   _Note: 如果你的 AI 骂人了，那是治理团队的锅。_
 
 ---

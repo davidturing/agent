@@ -52,11 +52,11 @@ graph TD
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [6.1-数据治理组织架构与责任体系搭建](./6.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%BB%84%E7%BB%87%E6%9E%B6%E6%9E%84%E4%B8%8E%E8%B4%A3%E4%BB%BB%E4%BD%93%E7%B3%BB%E6%90%AD%E5%BB%BA.md)
+*   [6.1-数据治理组织架构与责任体系搭建](6.1-data_governance_org_structure.md)
     *   _Note: 详解华为“铁三角”协同机制。_
-*   [6.2-数据治理全流程优化与业务融合](./6.2-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%85%A8%E6%B5%81%E7%A8%8B%E4%BC%98%E5%8C%96%E4%B8%8E%E4%B8%9A%E5%8A%A1%E8%9E%8D%E5%90%88.md)
+*   [6.2-数据治理全流程优化与业务融合](6.2-data_governance_process_optimization.md)
     *   _Note: 治理不能是“事后诸葛亮”，必须是“事前控制”。_
-*   [6.3-数据文化建设与全员意识培养](./6.3-%E6%95%B0%E6%8D%AE%E6%96%87%E5%8C%96%E5%BB%BA%E8%AE%BE%E4%B8%8E%E5%85%A8%E5%91%98%E6%84%8F%E8%AF%86%E5%9F%B9%E5%85%BB.md)
+*   [6.3-数据文化建设与全员意识培养](6.3-data_culture_awareness.md)
     *   _Note: 红黑榜是最低成本却最有效的管理工具。_
 
 ---

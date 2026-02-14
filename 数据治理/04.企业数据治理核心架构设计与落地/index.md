@@ -58,11 +58,11 @@ graph TD
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [4.1-数据架构设计的核心逻辑与实践范式](./4.1-%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E6%A0%B8%E5%BF%83%E9%80%BB%E8%BE%91%E4%B8%8E%E5%AE%9E%E8%B7%B5%E8%8C%83%E5%BC%8F.md)
+*   [4.1-数据架构设计的核心逻辑与实践范式](4.1-data_architecture_core_logic.md)
     *   _Note: 架构即政治。数据架构的本质是组织内部信息权力的重构。_
-*   [4.2-数据架构落地的难点与方案](./4.2-%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E8%90%BD%E5%9C%B0%E7%9A%84%E9%9A%BE%E7%82%B9%E4%B8%8E%E6%96%B9%E6%A1%88.md)
+*   [4.2-数据架构落地的难点与方案](4.2-data_architecture_challenges.md)
     *   _Note: 解析“烟囱式”建设的顽疾，以及如何通过“数据地图”实现资产可视化。_
-*   [4.3-华为和阿里的数据架构差异、理论溯源与适用场景](./4.3-%E5%8D%8E%E4%B8%BA%E5%92%8C%E9%98%BF%E9%87%8C%E7%9A%84%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E5%B7%AE%E5%BC%82%E3%80%81%E7%90%86%E8%AE%BA%E6%BA%AF%E6%BA%90%E4%B8%8E%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF.md)
+*   [4.3-华为和阿里的数据架构差异、理论溯源与适用场景](4.3-huawei_alibaba_data_architecture.md)
     *   _Note: 深度横评。不想被厂商忽悠，就得看懂这篇。_
 
 ---

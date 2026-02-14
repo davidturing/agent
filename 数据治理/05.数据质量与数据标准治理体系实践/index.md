@@ -60,9 +60,9 @@ DAMA 定义了数据质量的六个核心维度，我们必须熟记于心：
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [5.1-数据质量管理全流程管控](./5.1-%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E5%85%A8%E6%B5%81%E7%A8%8B%E7%AE%A1%E6%8E%A7.md)
+*   [5.1-数据质量管理全流程管控](5.1-data_quality_management_control.md)
     *   _Note: 详解华为“数据质量五维体系”与大规模 ETL 场景下的熔断机制。_
-*   [5.2-数据标准体系的构建、推广与迭代](./5.2-%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86%E4%BD%93%E7%B3%BB%E7%9A%84%E6%9E%84%E5%BB%BA%E3%80%81%E6%8E%A8%E5%B9%BF%E4%B8%8E%E8%BF%AD%E4%BB%A3.md)
+*   [5.2-数据标准体系的构建、推广与迭代](5.2-data_standard_development_iteration.md)
     *   _Note: 解决“标准与业务两张皮”的顽疾，探讨“刚性标准”与“弹性标准”的平衡。_
 
 ---

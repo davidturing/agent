@@ -51,9 +51,9 @@ graph LR
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [7.1-数据价值变现的核心路径](./7.1-%E6%95%B0%E6%8D%AE%E4%BB%B7%E5%80%BC%E5%8F%98%E7%8E%B0%E7%9A%84%E6%A0%B8%E5%BF%83%E8%B7%AF%E5%BE%84.md)
+*   [7.1-数据价值变现的核心路径](7.1-data_value_realization.md)
     *   _Note: 千万别只盯着技术指标（DQ Score），要盯着业务指标（GMV, CTR）。_
-*   [7.2-数据治理工具平台生态与选型适配](./7.2-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E5%B7%A5%E5%85%B7%E5%B9%B3%E5%8F%B0%E7%94%9F%E6%80%81%E4%B8%8E%E9%80%89%E5%9E%8B%E9%80%82%E9%85%8D.md)
+*   [7.2-数据治理工具平台生态与选型适配](7.2-data_governance_tool_selection.md)
     *   _Note: 没钱怎么做治理？送给中小企业的开源全家桶指南。_
 
 ---

@@ -60,13 +60,13 @@ graph LR
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [2.1-数据架构管理](./2.1-%E6%95%B0%E6%8D%AE%E6%9E%B6%E6%9E%84%E7%AE%A1%E7%90%86.md)
+*   [2.1-数据架构管理](2.1-data_architecture_management.md)
     *   _Note: 重点掌握纵向的“业务-逻辑-物理”三层架构，以及横向的中台化架构设计。_
-*   [2.2-数据质量管理](./2.2-%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86.md)
+*   [2.2-数据质量管理](2.2-data_quality_management.md)
     *   _Note: 所谓“垃圾进垃圾出 (GIGO)”，本节提供了一套完整的“清洗-监控-评估”实战方案。_
-*   [2.3-数据安全与合规管理](./2.3-%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E4%B8%8E%E5%90%88%E8%A7%84%E7%AE%A1%E7%90%86.md)
+*   [2.3-数据安全与合规管理](2.3-data_security_compliance.md)
     *   _Note: 涉及 GDPR、CCPA 及中国《数据安全法》的合规落地策略。_
-*   [2.4-其他关键知识领域](./2.4-%E5%85%B6%E4%BB%96%E5%85%B3%E9%94%AE%E7%9F%A5%E8%AF%86%E9%A2%86%E5%9F%9F.md)
+*   [2.4-其他关键知识领域](2.4-other_key_knowledge.md)
     *   _Note: 涵盖数据集成 (ETL/ELT)、文件与内容管理等补充领域。_
 
 ---

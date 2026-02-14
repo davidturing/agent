@@ -50,11 +50,11 @@ graph TD
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [8.1-数据要素化的核心逻辑与治理内涵](./8.1-%E6%95%B0%E6%8D%AE%E8%A6%81%E7%B4%A0%E5%8C%96%E7%9A%84%E6%A0%B8%E5%BF%83%E9%80%BB%E8%BE%91%E4%B8%8E%E6%B2%BB%E7%90%86%E5%86%85%E6%B6%B5.md)
+*   [8.1-数据要素化的核心逻辑与治理内涵](8.1-data_factor_core_logic.md)
     *   _Note: 为什么说“入表”是 CIO 和 CFO 对话的共同语言？_
-*   [8.2-国内外数据要素治理政策体系与演进](./8.2-%E5%9B%BD%E5%86%85%E5%A4%96%E6%95%B0%E6%8D%AE%E8%A6%81%E7%B4%A0%E6%B2%BB%E7%90%86%E6%94%BF%E7%AD%96%E4%BD%93%E7%B3%BB%E4%B8%8E%E6%BC%94%E8%BF%9B.md)
+*   [8.2-国内外数据要素治理政策体系与演进](8.2-data_governance_policy_evolution.md)
     *   _Note: 对比中欧美三种不同的治理哲学：发展优先 vs 隐私优先 vs 商业优先。_
-*   [8.3-数据要素市场建设与治理协同](./8.3-%E6%95%B0%E6%8D%AE%E8%A6%81%E7%B4%A0%E5%B8%82%E5%9C%BA%E5%BB%BA%E8%AE%BE%E4%B8%8E%E6%B2%BB%E7%90%86%E5%8D%8F%E5%90%8C.md)
+*   [8.3-数据要素市场建设与治理协同](8.3-data_market_governance.md)
     *   _Note: 了解数据交易所的“撮合”与“凭证”机制。_
 
 ---

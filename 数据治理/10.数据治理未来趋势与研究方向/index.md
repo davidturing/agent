@@ -50,7 +50,7 @@ graph TD
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [10.1-数据治理未来趋势与研究方向](./10.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E6%9C%AA%E6%9D%A5%E8%B6%8B%E5%8A%BF%E4%B8%8E%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91.md)
+*   [10.1-数据治理未来趋势与研究方向](10.1-data_governance_future_trends.md)
     *   _Note: 包含给硕士研究生的论文选题建议。_
 
 ---

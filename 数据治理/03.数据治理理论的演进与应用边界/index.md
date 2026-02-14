@@ -61,11 +61,11 @@ graph TD
 
 ## 🧭 4. 目录导航 (Section Navigation)
 
-*   [3.1-数据治理理论的发展脉络](./3.1-%E6%95%B0%E6%8D%AE%E6%B2%BB%E7%90%86%E7%90%86%E8%AE%BA%E7%9A%84%E5%8F%91%E5%B1%95%E8%84%89%E7%BB%9C.md)
+*   [3.1-数据治理理论的发展脉络](3.1-data_governance_development.md)
     *   _Note: 回顾历史是为了更好地面对未来。了解为什么会有“治理”这个概念。_
-*   [3.2-行业适配性分析](./3.2-%E8%A1%8C%E4%B8%9A%E9%80%82%E9%85%8D%E6%80%A7%E5%88%86%E6%9E%90.md)
+*   [3.2-行业适配性分析](3.2-industry_fit_analysis.md)
     *   _Note: 银行怎么做？淘宝怎么做？政府怎么做？不同的土壤长出不同的树。_
-*   [3.3-dama框架的局限性](./3.3-dama%E6%A1%86%E6%9E%B6%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7.md)
+*   [3.3-dama框架的局限性](3.3-dama_framework_limitations.md)
     *   _Note: 犀利指出“照搬 DAMA 必死”的原因。_
 
 ---
