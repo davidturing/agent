@@ -1,0 +1,27 @@
+# .gitignore for David Agent Project
+
+# Environment variables
+.env
+.env_test.py
+skills/self-learning-agent/.env
+skills/twitter-insight-task/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+
+# OpenClaw specifics
+.openclaw/
+.clawhub/
+.clawdhub/
+
+# Data and Logs
+stderr.txt
+stdout.txt
+analysis_failure_report.md
+
+# OS specific
+.DS_Store

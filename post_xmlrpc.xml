@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<methodCall>
+  <methodName>wp.newPost</methodName>
+  <params>
+    <param><value><int>1</int></value></param>
+    <param><value><string>davidturing</string></value></param>
+    <param><value><string>d4oy t4ae zq6l kwe4</string></value></param>
+    <param>
+      <value>
+        <struct>
+          <member>
+            <name>post_title</name>
+            <value><string>2026 科技发展趋势展望</string></value>
+          </member>
+          <member>
+            <name>post_content</name>
+            <value><string>&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;站在 2026 年的开端，我们看到科技正在以前所未有的速度重塑世界。以下是今年值得关注的几个核心趋势：&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2&gt;1. AI Agent 的全面普及&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;AI 不再只是聊天机器人，而是成为真正的“代理人”。它们不仅能回答问题，还能主动帮我们预订机票、管理日程，甚至编写和部署代码。OpenClaw 这样的平台正是这一趋势的代表。&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2&gt;2. 空间计算的落地&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;随着硬件成本的降低，AR/VR 设备正从极客玩具走向生产力工具。虚拟办公室和远程协作正在变得比现实更高效。&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:heading --&gt;
+&lt;h2&gt;3. 能源技术的突破&lt;/h2&gt;
+&lt;!-- /wp:heading --&gt;
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;为了支撑庞大的 AI 算力，清洁能源和电池存储技术迎来了新的爆发期。可控核聚变的商业化尝试正在加速。&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;
+
+&lt;!-- wp:paragraph --&gt;
+&lt;p&gt;&lt;em&gt;本文由 AI Agent 自动发布测试。&lt;/em&gt;&lt;/p&gt;
+&lt;!-- /wp:paragraph --&gt;</string></value>
+          </member>
+          <member>
+            <name>post_status</name>
+            <value><string>publish</string></value>
+          </member>
+        </struct>
+      </value>
+    </param>
+  </params>
+</methodCall>

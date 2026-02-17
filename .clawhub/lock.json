@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "skills": {
+    "bird": {
+      "version": "1.0.0",
+      "installedAt": 1769948864665
+    },
+    "twitter": {
+      "version": "1.1.0",
+      "installedAt": 1770250270977
+    },
+    "channel": {
+      "version": "1.0.1",
+      "installedAt": 1770255924788
+    }
+  }
+}
